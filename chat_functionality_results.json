@@ -1,0 +1,95 @@
+{
+  "timestamp": "2025-09-06T05:24:49.117Z",
+  "site": "https://www.chatwithlexi.com",
+  "chatFindings": [
+    {
+      "severity": "CRITICAL",
+      "title": "Chat page access failed",
+      "description": "Cannot access chat page: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.chatwithlexi.com/chat\", waiting until \"networkidle\"\u001b[22m\n",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:23.413Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Chat container present",
+      "description": "Main chat container element located",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:23.427Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Message input present",
+      "description": "Text input for messages located",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:23.429Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Send button present",
+      "description": "Send button located",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:23.542Z"
+    },
+    {
+      "severity": "HIGH",
+      "title": "Message history missing",
+      "description": "No message history display area found",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:23.544Z"
+    },
+    {
+      "severity": "HIGH",
+      "title": "Message sending test failed",
+      "description": "Error during message sending test: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button').filter({ hasText: /send|submit|>|➤|arrow/i }).first()\u001b[22m\n\u001b[2m    - locator resolved to <button>Send</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-x-0 bottom-0 z-[999]\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-x-0 bottom-0 z-[999]\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <div class=\"fixed inset-x-0 bottom-0 z-[999]\">…</div> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:53.632Z"
+    },
+    {
+      "severity": "MEDIUM",
+      "title": "Character element missing",
+      "description": "No character/avatar element found",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:53.634Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Mobile chat interface functional",
+      "description": "Chat input and send button work on mobile",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:25:54.725Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "homepage_before_chat",
+      "description": "Homepage before accessing chat",
+      "filename": "chat_1757136293286_homepage_before_chat.png",
+      "timestamp": "2025-09-06T05:24:53.410Z"
+    },
+    {
+      "name": "message_input_filled",
+      "description": "Message input with test content",
+      "filename": "chat_1757136323436_message_input_filled.png",
+      "timestamp": "2025-09-06T05:25:23.535Z"
+    },
+    {
+      "name": "before_send_message",
+      "description": "Before sending test message",
+      "filename": "chat_1757136323548_before_send_message.png",
+      "timestamp": "2025-09-06T05:25:23.623Z"
+    },
+    {
+      "name": "chat_mobile",
+      "description": "Chat interface on mobile viewport",
+      "filename": "chat_1757136354676_chat_mobile.png",
+      "timestamp": "2025-09-06T05:25:54.723Z"
+    },
+    {
+      "name": "chat_tablet",
+      "description": "Chat interface on tablet viewport",
+      "filename": "chat_1757136355744_chat_tablet.png",
+      "timestamp": "2025-09-06T05:25:55.831Z"
+    }
+  ],
+  "chatFlowTests": {}
+}

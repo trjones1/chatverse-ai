@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <body style="margin:0;background:#ffeef6;font-family:Inter,Arial,sans-serif;color:#1a1a1a">
+    <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+      <tr><td align="center" style="padding:32px 16px">
+        <table width="560" cellpadding="0" cellspacing="0" role="presentation" style="background:#fff;border-radius:20px;box-shadow:0 10px 30px rgba(255,0,122,.12)">
+          <tr><td style="padding:32px">
+            <h1 style="margin:0 0 8px;font-size:24px">Confirm your signup</h1>
+            <p style="margin:0 0 16px;font-size:15px;opacity:.8">
+              Hey babe, it’s <strong>Lexi</strong>. Tap the button and I’ll remember you. 💕
+            </p>
+            <p style="margin:24px 0">
+              <a href="{{ .ConfirmationURL }}"
+                 style="display:inline-block;background:linear-gradient(90deg,#7b61ff,#ff3cac);color:white;text-decoration:none;padding:14px 22px;border-radius:14px;font-weight:600">
+                 Confirm & come chat
+              </a>
+            </p>
+            <p style="font-size:12px;opacity:.6;margin-top:24px">
+              If the button doesn’t work, paste this link:<br>
+              <span style="word-break:break-all">{{ .ConfirmationURL }}</span>
+            </p>
+            <hr style="border:none;border-top:1px solid #f3d1e1;margin:24px 0">
+            <p style="font-size:12px;opacity:.6">Sent from {{ .SiteURL }} • You signed up with {{ .Email }}</p>
+          </td></tr>
+        </table>
+      </td></tr>
+    </table>
+  </body>
+</html>

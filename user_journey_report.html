@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatWithLexi - User Journey QA Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .header { border-bottom: 2px solid #333; padding-bottom: 20px; margin-bottom: 30px; }
+        .section { margin-bottom: 40px; }
+        .finding { margin: 15px 0; padding: 15px; border-left: 4px solid #ccc; }
+        .finding.CRITICAL { border-left-color: #ff0000; background-color: #fff5f5; }
+        .finding.HIGH { border-left-color: #ff6600; background-color: #fffaf0; }
+        .finding.MEDIUM { border-left-color: #ffcc00; background-color: #fffef0; }
+        .finding.POSITIVE { border-left-color: #00cc00; background-color: #f0fff0; }
+        .screenshot { margin: 10px 0; }
+        .summary { background-color: #e6f3ff; padding: 20px; border-radius: 5px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ChatWithLexi - User Journey QA Report</h1>
+        <p><strong>Site:</strong> https://www.chatwithlexi.com</p>
+        <p><strong>Assessment Date:</strong> 9/6/2025, 12:27:31 AM</p>
+        <p><strong>Focus:</strong> User Authentication, Navigation, and Journey Testing</p>
+    </div>
+    
+    <div class="summary">
+        <h2>User Journey Summary</h2>
+        <p><strong>Positive Findings:</strong> 12 (working features)</p>
+        <p><strong>Critical Issues:</strong> 0</p>
+        <p><strong>High Priority Issues:</strong> 4</p>
+        <p><strong>Medium Priority Issues:</strong> 1</p>
+        <p><strong>Total Screenshots:</strong> 8</p>
+    </div>
+
+    <div class="section">
+        <h2>User Journey Findings</h2>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Login option available</h3>
+                <p>Login button found for anonymous users</p>
+                <small>Detected at: 9/6/2025, 12:27:33 AM</small>
+            </div>
+        
+            <div class="finding MEDIUM">
+                <h3>[MEDIUM] Signup option missing</h3>
+                <p>No signup button found for anonymous users</p>
+                <small>Detected at: 9/6/2025, 12:27:33 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Anonymous dashboard access</h3>
+                <p>Anonymous users can access dashboard with upgrade prompts</p>
+                <small>Detected at: 9/6/2025, 12:27:35 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Anonymous chat access</h3>
+                <p>Anonymous users can access chat interface</p>
+                <small>Detected at: 9/6/2025, 12:27:35 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Message limits displayed</h3>
+                <p>Message limits shown: Unlimited Chats</p>
+                <small>Detected at: 9/6/2025, 12:27:35 AM</small>
+            </div>
+        
+            <div class="finding HIGH">
+                <h3>[HIGH] Login flow test failed</h3>
+                <p>Error testing login flow: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.chatwithlexi.com/", waiting until "networkidle"[22m
+</p>
+                <small>Detected at: 9/6/2025, 12:28:05 AM</small>
+            </div>
+        
+            <div class="finding HIGH">
+                <h3>[HIGH] Signup flow test failed</h3>
+                <p>Error testing signup flow: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.chatwithlexi.com/", waiting until "networkidle"[22m
+</p>
+                <small>Detected at: 9/6/2025, 12:28:35 AM</small>
+            </div>
+        
+            <div class="finding HIGH">
+                <h3>[HIGH] Premium upgrade options missing</h3>
+                <p>No premium upgrade options found on dashboard</p>
+                <small>Detected at: 9/6/2025, 12:28:36 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Homepage navigation present</h3>
+                <p>Navigation element found on Homepage</p>
+                <small>Detected at: 9/6/2025, 12:28:37 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Homepage page loads</h3>
+                <p>Homepage page loads successfully</p>
+                <small>Detected at: 9/6/2025, 12:28:37 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Chat navigation present</h3>
+                <p>Navigation element found on Chat</p>
+                <small>Detected at: 9/6/2025, 12:28:37 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Chat page loads</h3>
+                <p>Chat page loads successfully</p>
+                <small>Detected at: 9/6/2025, 12:28:37 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Dashboard navigation present</h3>
+                <p>Navigation element found on Dashboard</p>
+                <small>Detected at: 9/6/2025, 12:28:38 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Dashboard page loads</h3>
+                <p>Dashboard page loads successfully</p>
+                <small>Detected at: 9/6/2025, 12:28:38 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Settings navigation present</h3>
+                <p>Navigation element found on Settings</p>
+                <small>Detected at: 9/6/2025, 12:28:38 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Settings page loads</h3>
+                <p>Settings page loads successfully</p>
+                <small>Detected at: 9/6/2025, 12:28:38 AM</small>
+            </div>
+        
+            <div class="finding HIGH">
+                <h3>[HIGH] Responsive navigation test failed</h3>
+                <p>Error testing responsive navigation: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.chatwithlexi.com/", waiting until "networkidle"[22m
+</p>
+                <small>Detected at: 9/6/2025, 12:29:08 AM</small>
+            </div>
+        
+    </div>
+
+    <div class="section">
+        <h2>Test Screenshots</h2>
+        
+            <div class="screenshot">
+                <h4>anonymous_homepage</h4>
+                <p>Homepage as anonymous user</p>
+                <p><strong>File:</strong> journey_1757136453739_anonymous_homepage.png</p>
+                <small>Taken at: 9/6/2025, 12:27:33 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>anonymous_dashboard</h4>
+                <p>Dashboard page as anonymous user</p>
+                <p><strong>File:</strong> journey_1757136454876_anonymous_dashboard.png</p>
+                <small>Taken at: 9/6/2025, 12:27:35 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>anonymous_chat</h4>
+                <p>Chat page as anonymous user</p>
+                <p><strong>File:</strong> journey_1757136455256_anonymous_chat.png</p>
+                <small>Taken at: 9/6/2025, 12:27:35 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>dashboard_upgrade_options</h4>
+                <p>Dashboard showing upgrade options</p>
+                <p><strong>File:</strong> journey_1757136516450_dashboard_upgrade_options.png</p>
+                <small>Taken at: 9/6/2025, 12:28:36 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>nav_homepage</h4>
+                <p>Navigation to Homepage</p>
+                <p><strong>File:</strong> journey_1757136516820_nav_homepage.png</p>
+                <small>Taken at: 9/6/2025, 12:28:37 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>nav_chat</h4>
+                <p>Navigation to Chat</p>
+                <p><strong>File:</strong> journey_1757136517296_nav_chat.png</p>
+                <small>Taken at: 9/6/2025, 12:28:37 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>nav_dashboard</h4>
+                <p>Navigation to Dashboard</p>
+                <p><strong>File:</strong> journey_1757136517745_nav_dashboard.png</p>
+                <small>Taken at: 9/6/2025, 12:28:38 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>nav_settings</h4>
+                <p>Navigation to Settings</p>
+                <p><strong>File:</strong> journey_1757136518366_nav_settings.png</p>
+                <small>Taken at: 9/6/2025, 12:28:38 AM</small>
+            </div>
+        
+    </div>
+</body>
+</html>
+    

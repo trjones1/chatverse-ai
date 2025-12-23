@@ -1,0 +1,84 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Environment variables - NEVER COMMIT THESE!
+.env
+.env.local
+.env.*.local
+.env.development
+.env.test
+.env.production
+.env.backup
+.env.*.backup
+.env.stripe-*
+.env.character-*
+!.env.example
+!.env.*.example
+!.env.*.template
+
+# VS Code settings
+.vscode/
+
+# Mac crap
+*.DS_Store
+
+# Audio/image cache (if you add voice gen or image uploads)
+public/audio/*.mp3
+public/voice-cache/
+public/tmp-uploads/
+
+# Lock files (optional depending on workflow)
+package-lock.json
+.nvmrc
+*.patch
+.vercel
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# Test evidence and QA artifacts
+test-evidence/
+.playwright-mcp/
+*test-report*.html
+*validation-report*.html
+*findings-summary*.md
+*-report*.json
+*-report*.html
+*-report*.pdf
+signup-test-results-*.json
+google-auth-*.json
+qa-report-*.html
+qa-report-*.md
+qa-reports/
+test-grid-*.png
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Scripts with secrets
+scripts/stripe-*.sh
+
+# Exported data
+conversations-export.json
+*-export.json
+
+# Vercel
+.vercel/
+
+# Backup files
+*.backup

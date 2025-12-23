@@ -1,0 +1,177 @@
+{
+  "timestamp": "2025-09-06T05:27:31.610Z",
+  "site": "https://www.chatwithlexi.com",
+  "journeyFindings": [
+    {
+      "severity": "POSITIVE",
+      "title": "Login option available",
+      "description": "Login button found for anonymous users",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:27:33.899Z"
+    },
+    {
+      "severity": "MEDIUM",
+      "title": "Signup option missing",
+      "description": "No signup button found for anonymous users",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:27:33.900Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Anonymous dashboard access",
+      "description": "Anonymous users can access dashboard with upgrade prompts",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:27:35.056Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Anonymous chat access",
+      "description": "Anonymous users can access chat interface",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:27:35.563Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Message limits displayed",
+      "description": "Message limits shown: Unlimited Chats",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:27:35.566Z"
+    },
+    {
+      "severity": "HIGH",
+      "title": "Login flow test failed",
+      "description": "Error testing login flow: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.chatwithlexi.com/\", waiting until \"networkidle\"\u001b[22m\n",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:05.569Z"
+    },
+    {
+      "severity": "HIGH",
+      "title": "Signup flow test failed",
+      "description": "Error testing signup flow: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.chatwithlexi.com/\", waiting until \"networkidle\"\u001b[22m\n",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:35.577Z"
+    },
+    {
+      "severity": "HIGH",
+      "title": "Premium upgrade options missing",
+      "description": "No premium upgrade options found on dashboard",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:36.589Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Homepage navigation present",
+      "description": "Navigation element found on Homepage",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:37.129Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Homepage page loads",
+      "description": "Homepage page loads successfully",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:37.129Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Chat navigation present",
+      "description": "Navigation element found on Chat",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:37.613Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Chat page loads",
+      "description": "Chat page loads successfully",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:37.613Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Dashboard navigation present",
+      "description": "Navigation element found on Dashboard",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:38.038Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Dashboard page loads",
+      "description": "Dashboard page loads successfully",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:38.038Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Settings navigation present",
+      "description": "Navigation element found on Settings",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:38.682Z"
+    },
+    {
+      "severity": "POSITIVE",
+      "title": "Settings page loads",
+      "description": "Settings page loads successfully",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:28:38.683Z"
+    },
+    {
+      "severity": "HIGH",
+      "title": "Responsive navigation test failed",
+      "description": "Error testing responsive navigation: page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.chatwithlexi.com/\", waiting until \"networkidle\"\u001b[22m\n",
+      "evidence": null,
+      "timestamp": "2025-09-06T05:29:08.685Z"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "anonymous_homepage",
+      "description": "Homepage as anonymous user",
+      "filename": "journey_1757136453739_anonymous_homepage.png",
+      "timestamp": "2025-09-06T05:27:33.896Z"
+    },
+    {
+      "name": "anonymous_dashboard",
+      "description": "Dashboard page as anonymous user",
+      "filename": "journey_1757136454876_anonymous_dashboard.png",
+      "timestamp": "2025-09-06T05:27:35.056Z"
+    },
+    {
+      "name": "anonymous_chat",
+      "description": "Chat page as anonymous user",
+      "filename": "journey_1757136455256_anonymous_chat.png",
+      "timestamp": "2025-09-06T05:27:35.563Z"
+    },
+    {
+      "name": "dashboard_upgrade_options",
+      "description": "Dashboard showing upgrade options",
+      "filename": "journey_1757136516450_dashboard_upgrade_options.png",
+      "timestamp": "2025-09-06T05:28:36.586Z"
+    },
+    {
+      "name": "nav_homepage",
+      "description": "Navigation to Homepage",
+      "filename": "journey_1757136516820_nav_homepage.png",
+      "timestamp": "2025-09-06T05:28:37.127Z"
+    },
+    {
+      "name": "nav_chat",
+      "description": "Navigation to Chat",
+      "filename": "journey_1757136517296_nav_chat.png",
+      "timestamp": "2025-09-06T05:28:37.612Z"
+    },
+    {
+      "name": "nav_dashboard",
+      "description": "Navigation to Dashboard",
+      "filename": "journey_1757136517745_nav_dashboard.png",
+      "timestamp": "2025-09-06T05:28:38.037Z"
+    },
+    {
+      "name": "nav_settings",
+      "description": "Navigation to Settings",
+      "filename": "journey_1757136518366_nav_settings.png",
+      "timestamp": "2025-09-06T05:28:38.681Z"
+    }
+  ],
+  "userStates": {},
+  "authTests": {}
+}

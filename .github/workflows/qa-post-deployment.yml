@@ -1,0 +1,329 @@
+name: 🤖 Post-Deployment QA Testing (DISABLED)
+
+on:
+  # Disabled to avoid paid Actions charges
+  # deployment_status:
+  
+  # Manual trigger only (disabled for now)
+  # workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to test (preview/production)'
+        required: true
+        default: 'preview'
+        type: choice
+        options:
+          - preview
+          - production
+      domains:
+        description: 'Domains to test (comma-separated or "all")'
+        required: false
+        default: 'all'
+      test_type:
+        description: 'Test type to run'
+        required: true
+        default: 'comprehensive'
+        type: choice
+        options:
+          - smoke
+          - comprehensive
+          - full-journey
+
+env:
+  QA_HEADLESS: true
+  QA_TIMEOUT: 60000
+  QA_TAKE_SCREENSHOTS: true
+  QA_VIDEO_RECORD: false
+
+jobs:
+  # Only run on successful deployments
+  check-deployment:
+    if: github.event.deployment_status.state == 'success' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    outputs:
+      should-run-qa: ${{ steps.check.outputs.should-run }}
+      environment: ${{ steps.check.outputs.environment }}
+      deployment-url: ${{ steps.check.outputs.deployment-url }}
+    steps:
+      - name: Check deployment status
+        id: check
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "should-run=true" >> $GITHUB_OUTPUT
+            echo "environment=${{ github.event.inputs.environment }}" >> $GITHUB_OUTPUT
+            echo "deployment-url=https://chatwithlexi.com" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.deployment_status.state }}" == "success" ]]; then
+            echo "should-run=true" >> $GITHUB_OUTPUT
+            
+            # Determine environment from deployment
+            if [[ "${{ github.event.deployment_status.environment }}" == "production" ]]; then
+              echo "environment=production" >> $GITHUB_OUTPUT
+              echo "deployment-url=https://chatwithlexi.com" >> $GITHUB_OUTPUT
+            else
+              echo "environment=preview" >> $GITHUB_OUTPUT
+              echo "deployment-url=${{ github.event.deployment_status.target_url }}" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "should-run=false" >> $GITHUB_OUTPUT
+          fi
+
+  # Smoke tests - quick validation
+  smoke-tests:
+    needs: check-deployment
+    if: needs.check-deployment.outputs.should-run-qa == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    strategy:
+      matrix:
+        domain: 
+          - chatwithlexi.com
+          - fuckboychase.com
+          - talktonyx.com
+      fail-fast: false
+    
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📥 Install dependencies
+        run: |
+          npm install
+          npx playwright install
+          npx playwright install-deps
+
+      - name: 🔥 Run smoke tests
+        env:
+          ENVIRONMENT: ${{ needs.check-deployment.outputs.environment }}
+          DEPLOYMENT_URL: ${{ needs.check-deployment.outputs.deployment-url }}
+          QA_HEADLESS: true
+          QA_TIMEOUT: 60000
+          QA_TAKE_SCREENSHOTS: true
+          DEBUG: true
+        run: |
+          echo "🔍 Testing domain: ${{ matrix.domain }}"
+          echo "📍 Environment: $ENVIRONMENT"
+          echo "🌐 Deployment URL: $DEPLOYMENT_URL"
+          
+          # For preview deployments, test the Vercel URL instead of production domains
+          if [[ "$ENVIRONMENT" == "preview" && -n "$DEPLOYMENT_URL" ]]; then
+            echo "🎯 Preview deployment detected - testing Vercel URL: $DEPLOYMENT_URL"
+            echo "🌐 Network connectivity test:"
+            curl -I "$DEPLOYMENT_URL" || echo "❌ Preview URL not reachable"
+          else
+            echo "🌐 Production deployment - testing domain: https://${{ matrix.domain }}"
+            echo "🌐 Network connectivity test:"
+            curl -I https://${{ matrix.domain }} || echo "❌ Domain not reachable"
+          fi
+          
+          echo "🖥️  System info:"
+          uname -a
+          echo "🎭 Playwright browsers:"
+          npx playwright --version
+          echo "🚀 Running smoke test..."
+          timeout 120 node scripts/smoke-test-runner.js ${{ matrix.domain }}
+        continue-on-error: true
+
+      - name: 📊 Upload smoke test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-test-results-${{ matrix.domain }}
+          path: |
+            smoke-test-*.json
+            screenshots/
+          retention-days: 7
+
+  # Comprehensive QA tests - full user journey
+  comprehensive-qa:
+    needs: [check-deployment, smoke-tests]
+    if: needs.check-deployment.outputs.should-run-qa == 'true' && (github.event.inputs.test_type == 'comprehensive' || github.event.inputs.test_type == 'full-journey' || needs.check-deployment.outputs.environment == 'production' || github.event_name == 'pull_request')
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    
+    strategy:
+      matrix:
+        batch:
+          - domains: "chatwithlexi.com,fuckboychase.com,talktonyx.com"
+            name: "batch-1-main"
+          - domains: "sirdominic.com,chatwithethan.com,chatwithjayden.com"
+            name: "batch-2-male"
+          - domains: "chatwithmiles.com,chatwithchloe.com,waifuwithaiko.com"
+            name: "batch-3-diverse"
+          - domains: "chatwithzaria.com,chatwithnova.com"
+            name: "batch-4-premium"
+      fail-fast: false
+
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📥 Install dependencies
+        run: |
+          npm install
+          npx playwright install
+          npx playwright install-deps
+
+      - name: 🧪 Run comprehensive QA tests
+        env:
+          ENVIRONMENT: ${{ needs.check-deployment.outputs.environment }}
+          DEPLOYMENT_URL: ${{ needs.check-deployment.outputs.deployment-url }}
+          TEST_DOMAINS: ${{ matrix.domains }}
+          QA_BATCH_NAME: ${{ matrix.name }}
+        run: |
+          node scripts/comprehensive-qa-runner.js
+        continue-on-error: true
+
+      - name: 📊 Upload QA test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qa-results-${{ matrix.name }}
+          path: |
+            qa-report-*.json
+            screenshots/
+            videos/
+          retention-days: 30
+
+  # Generate consolidated report (temporarily disabled)
+  generate-report:
+    needs: [check-deployment, smoke-tests, comprehensive-qa]
+    if: false
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📥 Install dependencies
+        run: npm ci
+
+      - name: 📥 Download all test artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: test-results/
+
+      - name: 📋 Generate consolidated report
+        env:
+          ENVIRONMENT: ${{ needs.check-deployment.outputs.environment }}
+          DEPLOYMENT_URL: ${{ needs.check-deployment.outputs.deployment-url }}
+          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+        run: |
+          node scripts/generate-consolidated-report.js
+        
+      - name: 📊 Upload consolidated report
+        uses: actions/upload-artifact@v4
+        with:
+          name: consolidated-qa-report
+          path: |
+            consolidated-report.html
+            consolidated-report.json
+          retention-days: 90
+
+      - name: 💬 Comment on PR (if applicable)
+        if: github.event_name == 'pull_request' || github.event.pull_request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            // Read the consolidated report
+            const reportPath = 'consolidated-report.json';
+            if (fs.existsSync(reportPath)) {
+              const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+              
+              const summary = `
+              ## 🤖 Automated QA Test Results
+              
+              **Environment:** ${{ needs.check-deployment.outputs.environment }}
+              **Deployment:** ${{ needs.check-deployment.outputs.deployment-url }}
+              
+              ### 📊 Summary
+              - **Total Domains Tested:** ${report.summary.totalDomains}
+              - **Successful:** ${report.summary.successful} ✅
+              - **Failed:** ${report.summary.failed} ❌
+              - **Success Rate:** ${report.summary.successRate}%
+              - **Total Duration:** ${report.summary.totalDuration}
+              
+              ### 🎭 Domain Results
+              ${report.domains.map(domain => 
+                `- **${domain.name}:** ${domain.success ? '✅' : '❌'} (${domain.duration})`
+              ).join('\n')}
+              
+              ### 🔗 Artifacts
+              - [Detailed Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+              - Screenshots and videos available in artifacts
+              
+              ${report.summary.failed > 0 ? '⚠️ **Some tests failed - please review the detailed results.**' : '🎉 **All tests passed successfully!**'}
+              `;
+              
+              // Post comment on PR
+              if (context.issue.number) {
+                github.rest.issues.createComment({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: summary
+                });
+              }
+            }
+
+  # Notify on failures (temporarily disabled)
+  notify-failures:
+    needs: [check-deployment, smoke-tests, comprehensive-qa, generate-report]
+    if: false
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🚨 Notify on production failures
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Create an issue for production failures
+            const title = `🚨 QA Tests Failed - Production Deployment ${new Date().toISOString()}`;
+            const body = `
+            ## Production QA Test Failure
+            
+            **Deployment URL:** ${{ needs.check-deployment.outputs.deployment-url }}
+            **GitHub SHA:** ${{ github.sha }}
+            **Workflow Run:** https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            Multiple QA tests have failed on the production deployment. Please review the test results and investigate potential issues.
+            
+            ### Next Steps
+            1. Review the detailed test results in the workflow artifacts
+            2. Check for any deployment issues
+            3. Verify that all character domains are functioning correctly
+            4. Consider rolling back if critical functionality is broken
+            
+            ### Test Artifacts
+            - Consolidated report available in workflow artifacts
+            - Screenshots of failures included
+            - Performance metrics captured
+            
+            **Auto-generated by QA automation workflow**
+            `;
+            
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['qa-failure', 'production', 'urgent']
+            });

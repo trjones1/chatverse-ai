@@ -1,0 +1,2048 @@
+{
+  "timestamp": "2025-09-11T06:14:31.593Z",
+  "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3002/\", waiting until \"networkidle\"\u001b[22m\n",
+  "stack": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3002/\", waiting until \"networkidle\"\u001b[22m\n\n    at testAccountCreationFlow (/Users/tramel/code/lexi-bot/test-account-creation-detailed.js:71:16)",
+  "networkActivity": [
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.425Z",
+      "url": "http://localhost:3002/",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.577Z",
+      "url": "http://localhost:3002/",
+      "status": 307,
+      "statusText": "Temporary Redirect",
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+        "x-powered-by": "Next.js",
+        "link": "</_next/static/media/e4af272ccee01ff0-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </avatars/lexi.png>; rel=preload; as=\"image\"",
+        "location": "/chat",
+        "x-character-key": "lexi",
+        "x-character-name": "Lexi",
+        "x-hostname": "localhost:3002",
+        "x-middleware-rewrite": "/?_character=lexi"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.578Z",
+      "url": "http://localhost:3002/chat",
+      "method": "GET",
+      "headers": {
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.614Z",
+      "url": "http://localhost:3002/chat",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "keep-alive": "timeout=5",
+        "transfer-encoding": "chunked",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+        "x-powered-by": "Next.js",
+        "link": "</_next/static/media/e4af272ccee01ff0-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </avatars/lexi.png>; rel=preload; as=\"image\"",
+        "x-character-key": "lexi",
+        "x-character-name": "Lexi",
+        "x-hostname": "localhost:3002",
+        "x-middleware-rewrite": "/chat?_character=lexi"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.622Z",
+      "url": "http://localhost:3002/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+      "method": "GET",
+      "headers": {
+        "origin": "http://localhost:3002",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.622Z",
+      "url": "http://localhost:3002/avatars/lexi.png",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.624Z",
+      "url": "http://localhost:3002/_next/static/css/7d012f7e11b4ccbf.css",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.624Z",
+      "url": "http://localhost:3002/_next/static/css/7e7d96b1e6991756.css",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.624Z",
+      "url": "http://localhost:3002/_next/static/chunks/webpack-cf84482660fa3579.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.625Z",
+      "url": "http://localhost:3002/_next/static/chunks/4bd1b696-cc729d47eba2cee4.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.625Z",
+      "url": "http://localhost:3002/_next/static/chunks/5964-40978821a2ce41e4.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.625Z",
+      "url": "http://localhost:3002/_next/static/chunks/main-app-097a85ad98f6d650.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.630Z",
+      "url": "http://localhost:3002/_next/static/chunks/3865-6e2c231ed336a0a2.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.630Z",
+      "url": "http://localhost:3002/_next/static/chunks/6874-414075bb21e16c80.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.630Z",
+      "url": "http://localhost:3002/_next/static/chunks/3568-910f24efb29076aa.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.634Z",
+      "url": "http://localhost:3002/_next/static/chunks/6050-cd7b71a2b6d17cb3.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.635Z",
+      "url": "http://localhost:3002/_next/static/chunks/3674-17a7dae7cb50616e.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.636Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/layout-90384acbcdd94fa7.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.636Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/error-61e747169ebb0757.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.637Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/not-found-ed023799d2bd6a5a.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.638Z",
+      "url": "http://localhost:3002/_next/static/chunks/8e1d74a4-8c41f7e26a18d260.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.638Z",
+      "url": "http://localhost:3002/_next/static/chunks/3710-00a6d1c5fe476cf3.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.638Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/chat/page-08ec249350cdfb6c.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.640Z",
+      "url": "http://localhost:3002/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "public, max-age=31536000, immutable",
+        "etag": "W/\"bd30-1993768580c\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "content-length": "48432",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "font/woff2"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.640Z",
+      "url": "http://localhost:3002/_next/static/css/7d012f7e11b4ccbf.css",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"1303f-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "text/css; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.641Z",
+      "url": "http://localhost:3002/_next/static/css/7e7d96b1e6991756.css",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"80f-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "text/css; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.664Z",
+      "url": "http://localhost:3002/avatars/lexi.png",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "public, max-age=0",
+        "etag": "W/\"1a7289-198db177860\"",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "accept-ranges": "bytes",
+        "content-length": "1733257",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "x-middleware-rewrite": "/avatars/lexi.png?_character=lexi",
+        "last-modified": "Sun, 24 Aug 2025 08:00:05 GMT",
+        "x-character-name": "Lexi",
+        "content-type": "image/png"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.667Z",
+      "url": "http://localhost:3002/_next/static/chunks/webpack-cf84482660fa3579.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"d6b-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.667Z",
+      "url": "http://localhost:3002/_next/static/chunks/main-app-097a85ad98f6d650.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "etag": "W/\"23e-1993768580d\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "content-length": "574",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.668Z",
+      "url": "http://localhost:3002/_next/static/chunks/6874-414075bb21e16c80.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"2144-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.668Z",
+      "url": "http://localhost:3002/_next/static/chunks/4bd1b696-cc729d47eba2cee4.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"2a2bf-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.670Z",
+      "url": "http://localhost:3002/_next/static/chunks/5964-40978821a2ce41e4.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"2892c-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.670Z",
+      "url": "http://localhost:3002/_next/static/chunks/3568-910f24efb29076aa.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"32c7-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.670Z",
+      "url": "http://localhost:3002/_next/static/chunks/3865-6e2c231ed336a0a2.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"24136-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.670Z",
+      "url": "http://localhost:3002/_next/static/chunks/6050-cd7b71a2b6d17cb3.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"42d5-19937685812\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.671Z",
+      "url": "http://localhost:3002/_next/static/chunks/3674-17a7dae7cb50616e.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"3254-19937685812\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.707Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/layout-90384acbcdd94fa7.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"a26d-19937685810\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.710Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/error-61e747169ebb0757.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"f63-19937685810\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.710Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/not-found-ed023799d2bd6a5a.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "etag": "W/\"c3-19937685810\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "content-length": "195",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.714Z",
+      "url": "http://localhost:3002/_next/static/chunks/8e1d74a4-8c41f7e26a18d260.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "etag": "W/\"167-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "content-length": "359",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.715Z",
+      "url": "http://localhost:3002/_next/static/chunks/3710-00a6d1c5fe476cf3.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"c252-19937685812\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.715Z",
+      "url": "http://localhost:3002/_next/static/chunks/app/chat/page-08ec249350cdfb6c.js",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "W/\"1426c-19937685811\"",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "last-modified": "Thu, 11 Sep 2025 06:13:29 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.727Z",
+      "url": "https://js.stripe.com/basil/stripe.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.785Z",
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WZTWQF74",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.789Z",
+      "url": "http://localhost:3002/api/messages?character=lexi",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-user-id": "anon-1757571240764-s2x8kwgdj",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.790Z",
+      "url": "http://localhost:3002/dashboard?_rsc=pmmii",
+      "method": "GET",
+      "headers": {
+        "rsc": "1",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "next-router-prefetch": "1",
+        "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%22chat%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%2Ctrue%5D",
+        "next-url": "/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.790Z",
+      "url": "http://localhost:3002/portal?_rsc=pmmii",
+      "method": "GET",
+      "headers": {
+        "rsc": "1",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "next-router-prefetch": "1",
+        "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%22chat%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%2Ctrue%5D",
+        "next-url": "/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.792Z",
+      "url": "http://localhost:3002/journal?_rsc=pmmii",
+      "method": "GET",
+      "headers": {
+        "rsc": "1",
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "next-router-prefetch": "1",
+        "next-router-state-tree": "%5B%22%22%2C%7B%22children%22%3A%5B%22chat%22%2C%7B%22children%22%3A%5B%22__PAGE__%22%2C%7B%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%5D%7D%2Cnull%2Cnull%2Ctrue%5D",
+        "next-url": "/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.799Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "x-user-id": "anon-1757571240764-s2x8kwgdj",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.830Z",
+      "url": "https://js.stripe.com/basil/stripe.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "3812d624-ac2e-438b-99f6-9bb37969e717",
+        "content-encoding": "br",
+        "age": "12",
+        "x-content-type-options": "nosniff",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "x-served-by": "cache-chi-kigq8000174-CHI",
+        "x-cache-hits": "1",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=60",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "201644",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.869Z",
+      "url": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+      "method": "GET",
+      "headers": {
+        "referer": "http://localhost:3002/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.870Z",
+      "url": "http://localhost:3002/api/messages?character=lexi",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "content-type": "application/json",
+        "x-middleware-rewrite": "/api/messages?character=lexi&_character=lexi",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+        "x-character-name": "Lexi"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.924Z",
+      "url": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "124661",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "cache-control": "max-age=31536000",
+        "content-encoding": "br",
+        "content-length": "407",
+        "content-security-policy": "base-uri 'none'; connect-src 'self' https://api.stripe.com https://merchant-ui-api.stripe.com https://stripe.com/cookie-settings/enforcement-mode https://errors.stripe.com https://r.stripe.com https://ppm.stripe.com; default-src 'self'; font-src 'none'; form-action 'none'; frame-src 'self'; img-src 'self' https://q.stripe.com; media-src 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'sha256-0hAheEzaMe6uXIKV4EehS9pu1am1lj/KnnzrOYqckXk='; worker-src 'none'; report-uri https://q.stripe.com/csp-report",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "origin-agent-cluster": "?1",
+        "server": "Fastly",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "timing-allow-origin": "*",
+        "vary": "Accept-Encoding",
+        "via": "1.1 varnish",
+        "x-cache": "HIT",
+        "x-cache-hits": "3133",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "ef32c542-fa79-4e5e-b892-6b7490169acc",
+        "x-served-by": "cache-chi-kigq8000154-CHI"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:00.968Z",
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-WZTWQF74",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "cache-control": "private, max-age=900",
+        "content-encoding": "zstd",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-credentials": "true",
+        "expires": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "access-control-allow-origin": "*",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "content-length": "102601",
+        "date": "Thu, 11 Sep 2025 06:14:00 GMT",
+        "x-xss-protection": "0",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "server": "Google Tag Manager",
+        "access-control-allow-headers": "Cache-Control"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.986Z",
+      "url": "https://consent.cookiebot.com/uc.js?cbid=e5922c76-f5e9-4713-89d7-942fcebacec8&implementation=gtm&consentmode-dataredaction=dynamic",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.987Z",
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-HCRWE15MBR&cx=c&gtm=4e5991",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.987Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/shared-df53ec9db9d9d627e90923f13bf42ff7.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:00.988Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/controller-with-preconnect-e60adb867e9bee9ff089bec27aa3aced.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.046Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/shared-df53ec9db9d9d627e90923f13bf42ff7.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "ffa50f35-7b1f-4c81-ad2b-d3bd2cd495ab",
+        "content-encoding": "br",
+        "age": "124661",
+        "x-content-type-options": "nosniff",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "x-served-by": "cache-chi-kigq8000154-CHI",
+        "x-cache-hits": "15434",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=31536000",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "162893",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.064Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/controller-with-preconnect-e60adb867e9bee9ff089bec27aa3aced.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "e525547b-3486-4536-9116-0e4585ae78cd",
+        "content-encoding": "br",
+        "age": "124661",
+        "x-content-type-options": "nosniff",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "x-served-by": "cache-chi-kigq8000154-CHI",
+        "x-cache-hits": "14744",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=31536000",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "222431",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.121Z",
+      "url": "https://consent.cookiebot.com/uc.js?cbid=e5922c76-f5e9-4713-89d7-942fcebacec8&implementation=gtm&consentmode-dataredaction=dynamic",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "access-control-expose-headers": "Request-Context",
+        "cache-control": "public, max-age=929",
+        "content-encoding": "gzip",
+        "etag": "\"eb2b26211d11dc1:0\"",
+        "cross-origin-resource-policy": "cross-origin",
+        "request-context": "appId=cid-v1:89f47f4b-bed0-4db8-956b-d6e6dfac3fef",
+        "expires": "Thu, 11 Sep 2025 06:29:30 GMT",
+        "accept-ranges": "bytes",
+        "content-length": "34776",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "application/javascript",
+        "last-modified": "Tue, 19 Aug 2025 15:22:52 GMT",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.124Z",
+      "url": "https://js.stripe.com/v3/.deploy_status_henson.json",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.126Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/stripe-cookies-0365765a4afa0da4fe353e8fa3bd8a03.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.127Z",
+      "url": "https://js.stripe.com/v3/.deploy_status_henson.json",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/v3/controller-with-preconnect-6bf9c28dd0dc6b1e6effc700a437c614.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.152Z",
+      "url": "https://consentcdn.cookiebot.com/sdk/bc-v4.min.html",
+      "method": "GET",
+      "headers": {
+        "referer": "http://localhost:3002/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.152Z",
+      "url": "https://consent.cookiebot.com/e5922c76-f5e9-4713-89d7-942fcebacec8/cc.js?renew=false&referer=localhost&dnt=false&init=false",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.153Z",
+      "url": "https://www.googletagmanager.com/gtag/destination?id=G-HCRWE15MBR&cx=c&gtm=4e5991",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "content-encoding": "zstd",
+        "report-to": "{\"group\":\"ascgsrsghrgc:72:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascgsrsghrgc:72:0\"}],}",
+        "expires": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "application/javascript; charset=UTF-8",
+        "vary": "Accept-Encoding",
+        "access-control-allow-headers": "Cache-Control",
+        "strict-transport-security": "max-age=31536000; includeSubDomains",
+        "cache-control": "private, max-age=900",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-credentials": "true",
+        "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascgsrsghrgc:72:0",
+        "access-control-allow-origin": "*",
+        "cross-origin-opener-policy-report-only": "same-origin; report-to=ascgsrsghrgc:72:0",
+        "content-length": "141273",
+        "x-xss-protection": "0",
+        "server": "Google Tag Manager"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.153Z",
+      "url": "https://js.stripe.com/v3/.deploy_status_henson.json",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "0dddb358-1e4d-47b6-9d2b-a34319b85664",
+        "content-encoding": "br",
+        "age": "11",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "application/json",
+        "x-served-by": "cache-chi-kigq8000129-CHI",
+        "x-cache-hits": "2",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=60",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "282",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.153Z",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-HCRWE15MBR&gtm=45je5991v9228129087z89226691275za200zb9226691275zd9226691275&_p=1757571240763&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&gdid=dMWZhNz&cid=1411349911.1757571241&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=macOS&uapv=14.1.1&uaw=0&are=1&frm=0&pscdl=denied&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104630779~104630781~104684208~104684211~104948813~105367987~105367989~105426769~105426771~115616986&sid=1757571241&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fchat&dt=Chat%20with%20Lexi%20-%20Your%20AI%20Companion&_tu=CA&en=Page%20views&_fv=1&_nsi=1&_ss=1&tfd=707",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.154Z",
+      "url": "https://js.stripe.com/v3/.deploy_status_henson.json",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "0dddb358-1e4d-47b6-9d2b-a34319b85664",
+        "content-encoding": "br",
+        "age": "11",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "application/json",
+        "x-served-by": "cache-chi-kigq8000129-CHI",
+        "x-cache-hits": "2",
+        "vary": "Accept-Encoding",
+        "cache-control": "max-age=60",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "282",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.155Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/stripe-cookies-0365765a4afa0da4fe353e8fa3bd8a03.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "45718a52-9b52-4046-9cc3-87e1c25c7275",
+        "content-encoding": "br",
+        "etag": "\"77d43802abe03e19a8a1d1c4594cc253\"",
+        "age": "2065225",
+        "x-content-type-options": "nosniff",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "last-modified": "Wed, 16 Apr 2025 20:38:21 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "x-served-by": "cache-chi-kigq8000025-CHI",
+        "x-cache-hits": "96889",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=31536000",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "13874",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.201Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.238Z",
+      "url": "https://consentcdn.cookiebot.com/sdk/bc-v4.min.html",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "accept-ranges": "bytes",
+        "cache-control": "max-age=31450819",
+        "content-encoding": "gzip",
+        "content-length": "392",
+        "content-type": "text/html",
+        "cross-origin-embedder-policy": "require-corp",
+        "cross-origin-resource-policy": "cross-origin",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "etag": "\"3d08665fa4c7bcf9fa2dcbbc7efe1d0f:1649057029.895163\"",
+        "expires": "Thu, 10 Sep 2026 06:34:20 GMT",
+        "last-modified": "Mon, 04 Apr 2022 07:23:49 GMT",
+        "server": "AkamaiNetStorage",
+        "server-timing": "cdn-cache; desc=HIT\nedge; dur=1\nak_p; desc=\"1757571241185_388045962_235990173_16_465_9_23_255\";dur=1",
+        "vary": "Accept-Encoding",
+        "x-akamai-transformed": "9 - 0 pmb=mRUM,1"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.243Z",
+      "url": "https://consent.cookiebot.com/e5922c76-f5e9-4713-89d7-942fcebacec8/cc.js?renew=false&referer=localhost&dnt=false&init=false",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "cache-control": "private, max-age=60",
+        "access-control-expose-headers": "Request-Context",
+        "content-encoding": "gzip",
+        "cross-origin-resource-policy": "cross-origin",
+        "request-context": "appId=cid-v1:89f47f4b-bed0-4db8-956b-d6e6dfac3fef",
+        "content-length": "352",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "application/x-javascript; charset=utf-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.257Z",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-HCRWE15MBR&gtm=45je5991v9228129087z89226691275za200zb9226691275zd9226691275&_p=1757571240763&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&gdid=dMWZhNz&cid=1411349911.1757571241&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=macOS&uapv=14.1.1&uaw=0&are=1&frm=0&pscdl=denied&_s=1&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104630779~104630781~104684208~104684211~104948813~105367987~105367989~105426769~105426771~115616986&sid=1757571241&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fchat&dt=Chat%20with%20Lexi%20-%20Your%20AI%20Companion&_tu=CA&en=Page%20views&_fv=1&_nsi=1&_ss=1&tfd=707",
+      "status": 204,
+      "statusText": "",
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "pragma": "no-cache",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-credentials": "true",
+        "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascnsrsggc:102:0",
+        "report-to": "{\"group\":\"ascnsrsggc:102:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascnsrsggc:102:0\"}],}",
+        "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+        "access-control-allow-origin": "http://localhost:3002",
+        "cross-origin-opener-policy-report-only": "same-origin; report-to=ascnsrsggc:102:0",
+        "content-length": "0",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "content-type": "text/plain",
+        "server": "Golfe2"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.317Z",
+      "url": "https://imgsct.cookiebot.com/1.gif?dgi=e5922c76-f5e9-4713-89d7-942fcebacec8",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.375Z",
+      "url": "https://imgsct.cookiebot.com/1.gif?dgi=e5922c76-f5e9-4713-89d7-942fcebacec8",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "x-goog-metageneration": "1",
+        "access-control-expose-headers": "*",
+        "x-goog-hash": "crc32c=rX4K2g==, md5=whlt6LpBLGDCKrSRr3sUCQ==",
+        "etag": "\"c2196de8ba412c60c22ab491af7b1409\"",
+        "x-goog-stored-content-encoding": "identity",
+        "x-goog-stored-content-length": "35",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "last-modified": "Mon, 23 Oct 2023 11:39:32 GMT",
+        "content-type": "image/gif",
+        "x-guploader-uploadid": "ABgVH89a4-htSe0sNbIbQngmQZbFI1Rt-yh5ZjMr-1U9uIYCM_2OwWDSEj4eFoc5b8WONz1NSSpAou4",
+        "cache-control": "public,max-age=1800",
+        "x-goog-storage-class": "STANDARD",
+        "cross-origin-resource-policy": "cross-origin",
+        "connection": "keep-alive",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "x-goog-generation": "1698061172769999",
+        "content-length": "35",
+        "server": "UploadServer"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.871Z",
+      "url": "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+      "method": "GET",
+      "headers": {
+        "referer": "http://localhost:3002/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.880Z",
+      "url": "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "age": "2581658",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "cache-control": "max-age=31536000",
+        "content-encoding": "br",
+        "content-length": "154",
+        "content-security-policy": "base-uri 'none'; connect-src 'self' https://r.stripe.com; default-src 'self'; font-src 'none'; form-action 'none'; frame-src https://m.stripe.network; img-src https://q.stripe.com; media-src 'none'; object-src 'none'; script-src 'self'; style-src 'self'; report-uri https://q.stripe.com/csp-report",
+        "content-security-policy-report-only": "base-uri 'none'; connect-src 'self' https://r.stripe.com; default-src 'self'; font-src 'none'; form-action 'none'; frame-src https://m.stripe.network; img-src https://q.stripe.com; media-src 'none'; object-src 'none'; script-src 'self'; style-src 'self'; report-uri https://q.stripe.com/csp-report",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "etag": "\"3437aaddcdf6922d623e172c2d6f9278\"",
+        "last-modified": "Fri, 11 Nov 2022 20:25:37 GMT",
+        "server": "Fastly",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "timing-allow-origin": "*",
+        "vary": "Accept-Encoding",
+        "via": "1.1 varnish",
+        "x-cache": "HIT",
+        "x-cache-hits": "265831",
+        "x-content-type-options": "nosniff",
+        "x-request-id": "44923de9-358d-45b8-9842-3e0720b09545",
+        "x-served-by": "cache-chi-kigq8000025-CHI"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.890Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/m-outer-15a2b40a058ddff1cffdb63779fe3de1.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.896Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/m-outer-15a2b40a058ddff1cffdb63779fe3de1.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "f02fd10a-0c99-4901-8ae2-9c609be5db6a",
+        "content-encoding": "br",
+        "etag": "\"d96c709017743c0759cf3853d1806ba5\"",
+        "age": "2048948",
+        "x-content-type-options": "nosniff",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:01 GMT",
+        "last-modified": "Fri, 11 Nov 2022 20:25:36 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "x-served-by": "cache-chi-kigq8000025-CHI",
+        "x-cache-hits": "253581",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=31536000",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "315",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.898Z",
+      "url": "https://m.stripe.network/inner.html",
+      "method": "GET",
+      "headers": {
+        "referer": "https://js.stripe.com/",
+        "upgrade-insecure-requests": "1",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.946Z",
+      "url": "https://m.stripe.network/inner.html",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "accept-ranges": "bytes",
+        "age": "293",
+        "cache-control": "max-age=300, public",
+        "content-length": "930",
+        "content-security-policy": "base-uri 'none'; connect-src https://m.stripe.network https://m.stripe.com; default-src 'none'; font-src https://m.stripe.network https://fonts.gstatic.com; form-action 'none'; frame-src https://m.stripe.network https://js.stripe.com; img-src https://m.stripe.network https://m.stripe.com https://b.stripecdn.com; script-src https://m.stripe.network 'sha256-e357n1PxCJ8d03/QCSKaHFmHF1JADyvSHdSfshxM494=' 'sha256-5DA+a07wxWmEka9IdoWjSPVHb17Cp5284/lJzfbl8KA=' 'sha256-/5Guo2nzv5n/w6ukZpOBZOtTJBJPSkJ6mhHpnBgm3Ls='; style-src https://m.stripe.network; report-uri https://q.stripe.com/csp-report",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 11 Sep 2025 06:09:09 GMT",
+        "etag": "\"441070f07f0e89a26ecd81c9afcab8ed\"",
+        "last-modified": "Wed, 10 Sep 2025 21:05:01 GMT",
+        "server": "Cloudfront",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "vary": "Accept-Encoding, Origin",
+        "via": "1.1 058a7e4b7238415e6a1383e9c207acac.cloudfront.net (CloudFront)",
+        "x-amz-cf-id": "FVidqEKTFxtnQai7OzcDxDma7I2QI04rlY4jK3GDfVLIkEfOL2LjJQ==",
+        "x-amz-cf-pop": "ORD58-P7",
+        "x-cache": "Hit from cloudfront",
+        "x-content-type-options": "nosniff"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:01.965Z",
+      "url": "https://m.stripe.network/out-4.5.45.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://m.stripe.network/inner.html",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:01.976Z",
+      "url": "https://m.stripe.network/out-4.5.45.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=300, public",
+        "content-encoding": "br",
+        "etag": "W/\"f4d61b273ea36d2e71ce1a601ab0caa2\"",
+        "age": "235",
+        "x-content-type-options": "nosniff",
+        "via": "1.1 058a7e4b7238415e6a1383e9c207acac.cloudfront.net (CloudFront)",
+        "x-cache": "Hit from cloudfront",
+        "x-amz-cf-id": "1euX-23Ef5grVGWD7Zttcu2W0GY0vwuXGyaRNJ08_nPdoQ-XYBYRGA==",
+        "date": "Thu, 11 Sep 2025 06:10:07 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "last-modified": "Wed, 10 Sep 2025 21:05:01 GMT",
+        "server": "Cloudfront",
+        "x-amz-cf-pop": "ORD58-P7",
+        "vary": "Accept-Encoding, Origin"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:02.045Z",
+      "url": "https://m.stripe.com/6",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://m.stripe.network/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "text/plain;charset=UTF-8",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "JTdCJTIydjIlMjIlM0ExJTJDJTIyaWQlMjIlM0ElMjJjZTM4MGVjZjAzMTc4NjU0ZGQ4OTcwNjY5ZDZkYWYyOSUyMiUyQyUyMnQlMjIlM0E2MS44JTJDJTIydGFnJTIyJTNBJTIyJTI0bnBtX3BhY2thZ2VfdmVyc2lvbiUyMiUyQyUyMnNyYyUyMiUzQSUyMmpzJTIyJTJDJTIyYSUyMiUzQSU3QiUyMmElMjIlM0ElN0IlMjJ2JTIyJTNBJTIydHJ1ZSUyMiUyQyUyMnQlMjIlM0EwJTdEJTJDJTIyYiUyMiUzQSU3QiUyMnYlMjIlM0ElMjJmYWxzZSUyMiUyQyUyMnQlMjIlM0EwJTdEJTJDJTIyYyUyMiUzQSU3QiUyMnYlMjIlM0ElMjJlbi1VUyUyMiUyQyUyMnQlMjIlM0EwLjElN0QlMkMlMjJkJTIyJTNBJTdCJTIydiUyMiUzQSUyMk1hY0ludGVsJTIyJTJDJTIydCUyMiUzQTAlN0QlMkMlMjJlJTIyJTNBJTdCJTIydiUyMiUzQSUyMlBERiUyMFZpZXdlciUyQ2ludGVybmFsLXBkZi12aWV3ZXIlMkNhcHBsaWNhdGlvbiUyRnBkZiUyQ3BkZiUyQiUyQnRleHQlMkZwZGYlMkNwZGYlMkMlMjBDaHJvbWUlMjBQREYlMjBWaWV3ZXIlMkNpbnRlcm5hbC1wZGYtdmlld2VyJTJDYXBwbGljYXRpb24lMkZwZGYlMkNwZGYlMkIlMkJ0ZXh0JTJGcGRmJTJDcGRmJTJDJTIwQ2hyb21pdW0lMjBQREYlMjBWaWV3ZXIlMkNpbnRlcm5hbC1wZGYtdmlld2VyJTJDYXBwbGljYXRpb24lMkZwZGYlMkNwZGYlMkIlMkJ0ZXh0JTJGcGRmJTJDcGRmJTJDJTIwTWljcm9zb2Z0JTIwRWRnZSUyMFBERiUyMFZpZXdlciUyQ2ludGVybmFsLXBkZi12aWV3ZXIlMkNhcHBsaWNhdGlvbiUyRnBkZiUyQ3BkZiUyQiUyQnRleHQlMkZwZGYlMkNwZGYlMkMlMjBXZWJLaXQlMjBidWlsdC1pbiUyMFBERiUyQ2ludGVybmFsLXBkZi12aWV3ZXIlMkNhcHBsaWNhdGlvbiUyRnBkZiUyQ3BkZiUyQiUyQnRleHQlMkZwZGYlMkNwZGYlMjIlMkMlMjJ0JTIyJTNBMSU3RCUyQyUyMmYlMjIlM0ElN0IlMjJ2JTIyJTNBJTIyMTQ0MHdfODc1aF8zMGRfMnIlMjIlMkMlMjJ0JTIyJTNBMCU3RCUyQyUyMmclMjIlM0ElN0IlMjJ2JTIyJTNBJTIyLTUlMjIlMkMlMjJ0JTIyJTNBMCU3RCUyQyUyMmglMjIlM0ElN0IlMjJ2JTIyJTNBJTIyZmFsc2UlMjIlMkMlMjJ0JTIyJTNBMCU3RCUyQyUyMmklMjIlM0ElN0IlMjJ2JTIyJTNBJTIyc2Vzc2lvblN0b3JhZ2UtZW5hYmxlZCUyQyUyMGxvY2FsU3RvcmFnZS1lbmFibGVkJTIyJTJDJTIydCUyMiUzQTAuNCU3RCUyQyUyMmolMjIlM0ElN0IlMjJ2JTIyJTNBJTIyMTEwMDExMTEwMDAwMDAwMDEwMDExMDExMTEwMDAwMDAwMDAwMDAxMTAwMTAwMDAxMDExMTExMSUyMiUyQyUyMnQlMjIlM0E0OS4zJTJDJTIyYXQlMjIlM0ExMS41JTdEJTJDJTIyayUyMiUzQSU3QiUyMnYlMjIlM0ElMjIlMjIlMkMlMjJ0JTIyJTNBMCU3RCUyQyUyMmwlMjIlM0ElN0IlMjJ2JTIyJTNBJTIyTW96aWxsYSUyRjUuMCUyMChNYWNpbnRvc2glM0IlMjBJbnRlbCUyME1hYyUyME9TJTIwWCUyMDEwXzE1XzcpJTIwQXBwbGVXZWJLaXQlMkY1MzcuMzYlMjAoS0hUTUwlMkMlMjBsaWtlJTIwR2Vja28pJTIwQ2hyb21lJTJGMTQwLjAuMC4wJTIwU2FmYXJpJTJGNTM3LjM2JTIyJTJDJTIydCUyMiUzQTAlN0QlMkMlMjJtJTIyJTNBJTdCJTIydiUyMiUzQSUyMiUyMiUyQyUyMnQlMjIlM0EwLjElN0QlMkMlMjJuJTIyJTNBJTdCJTIydiUyMiUzQSUyMmZhbHNlJTIyJTJDJTIydCUyMiUzQTIxLjMlMkMlMjJhdCUyMiUzQTAuMyU3RCUyQyUyMm8lMjIlM0ElN0IlMjJ2JTIyJTNBJTIyM2Q5NTgwNDQ0NTdiZDYzZjJhNmFiODE4MGFlNDU1NWQlMjIlMkMlMjJ0JTIyJTNBMTAuMSU3RCU3RCUyQyUyMmIlMjIlM0ElN0IlMjJhJTIyJTNBJTIyJTIyJTJDJTIyYiUyMiUzQSUyMmh0dHAlM0ElMkYlMkZCN0hVeE1NaEhzTVl3Y3dSMEdLbWZqZ0FOVS1SSHR3SlBwampJVmhBamtnJTNBODJFZThEY3d3eDlOOWhZeVB1U1QxVXpwaGpVajFTaE81eExsLWJ2WGk0dyUyRmk1WDZfZnJ0dHhjcUNCTUUyczJ4UnhpSENxbEc5U0lLZVNoRjFPRllldWclMjIlMkMlMjJjJTIyJTNBJTIyZzF3RGw2S1VUYkRuOFQwS01WM3FwaklCRTc5ZmdjY05zSjRoMzVjb3o4VSUyMiUyQyUyMmQlMjIlM0ElMjJOQSUyMiUyQyUyMmUlMjIlM0ElMjJOQSUyMiUyQyUyMmYlMjIlM0FmYWxzZSUyQyUyMmclMjIlM0F0cnVlJTJDJTIyaCUyMiUzQXRydWUlMkMlMjJpJTIyJTNBJTVCJTIybG9jYXRpb24lMjIlNUQlMkMlMjJqJTIyJTNBJTVCJTVEJTJDJTIybiUyMiUzQTg0LjE5OTk5OTk5OTI1NDk0JTJDJTIydSUyMiUzQSUyMmxvY2FsaG9zdCUyMiUyQyUyMnclMjIlM0ElMjIxNzU3NTcxMjQyMDQzJTNBMDA2YmFhZmFmM2ZmMTIwYjI5MDQ2ZGYwZWVmOTM4ZWYzYjIxMDhlYjEwOGI5NzlmZDRhNDU0ZmFjMGM2NGVhMCUyMiU3RCUyQyUyMmglMjIlM0ElMjI1MmI2OTkyMmQ1ZTM3YmM4MDlkOCUyMiU3RA=="
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:02.128Z",
+      "url": "https://r.stripe.com/b",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "client_id=stripe-js&num_requests=1&events=%5B%7B%22event_name%22%3A%22elements.link.init%22%2C%22created%22%3A1757571241091%2C%22batching_enabled%22%3Atrue%2C%22event_count%22%3A1%2C%22os%22%3A%22MacOS%22%2C%22browserFamily%22%3A%22Chrome%22%2C%22version%22%3A%221d920cd907%22%2C%22event_id%22%3A%22f9f5deb2-448e-4ead-871d-71271391c774%22%2C%22deploy_status%22%3A%22main%22%2C%22browserClassification%22%3A%22modern%22%2C%22browser_classification_v2%22%3A%222024%22%2C%22connection_rtt%22%3A%2250%22%2C%22connection_downlink%22%3A%221.6%22%2C%22connection_effective_type%22%3A%224g%22%2C%22link_api_client%22%3A%22true%22%2C%22publishable_key%22%3A%22pk_test_51RpNgvCld7bcCt6Hc7r1nrN3gjZE3dTroaFJFFnQeo0tEUr2zDR8QAaoJsGhcDz9dLJ5vLWyoZggxtgwnMTEgV4y00XyIWk5Gg%22%2C%22request_surface%22%3A%22web_elements_controller%22%2C%22livemode%22%3A%22false%22%2C%22routing%22%3A%22root%22%2C%22session_id%22%3A%22043984b8-d84e-4d15-a412-12e8b8e6b851%22%2C%22browser_storage_strategies%22%3A%22sessionStorage+localStorage+httpCookie%22%2C%22deploy_status_time_to_fetch_ms%22%3A%2234%22%2C%22deploy_status_fetch_failed%22%3A%22false%22%2C%22cdn_name%22%3A%22Fastly%22%2C%22cdn_pop_dc%22%3A%22CHI%22%7D%5D"
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:02.149Z",
+      "url": "https://r.stripe.com/b",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "client_id=stripe-js&num_requests=3&events=%5B%7B%22event_name%22%3A%22elements.controller.load%22%2C%22created%22%3A1757571241093%2C%22batching_enabled%22%3Atrue%2C%22event_count%22%3A1%2C%22os%22%3A%22MacOS%22%2C%22browserFamily%22%3A%22Chrome%22%2C%22version%22%3A%221d920cd907%22%2C%22event_id%22%3A%221762bc27-a00a-4e26-898b-a54a7a507503%22%2C%22deploy_status%22%3A%22main%22%2C%22browserClassification%22%3A%22modern%22%2C%22browser_classification_v2%22%3A%222024%22%2C%22connection_rtt%22%3A%2250%22%2C%22connection_downlink%22%3A%221.6%22%2C%22connection_effective_type%22%3A%224g%22%2C%22key%22%3A%22pk_test_51RpNgvCld7bcCt6Hc7r1nrN3gjZE3dTroaFJFFnQeo0tEUr2zDR8QAaoJsGhcDz9dLJ5vLWyoZggxtgwnMTEgV4y00XyIWk5Gg%22%2C%22key_mode%22%3A%22test%22%2C%22referrer%22%3A%22http%3A%2F%2Flocalhost%3A3002%22%2C%22stripe_js_id%22%3A%22043984b8-d84e-4d15-a412-12e8b8e6b851%22%2C%22stripe_obj_id%22%3A%22sobj-eeda9882-7189-4315-9952-347a65622997%22%2C%22controller_load_time%22%3A1757571241090%2C%22stripe_js_release_train%22%3A%22basil%22%2C%22wrapper%22%3A%22unknown%22%2C%22es_module%22%3A%22true%22%2C%22es_module_version%22%3A%227.9.0%22%2C%22deploy_status_time_to_fetch_ms%22%3A%2254%22%2C%22deploy_status_fetch_failed%22%3A%22false%22%2C%22cdn_name%22%3A%22Fastly%22%2C%22cdn_pop_dc%22%3A%22CHI%22%2C%22frame_width%22%3A1280%2C%22controller_count%22%3A%221%22%2C%22has_link_auth%22%3A%22false%22%7D%2C%7B%22event_name%22%3A%22elements.fetch_locale%22%2C%22created%22%3A1757571241146%2C%22batching_enabled%22%3Atrue%2C%22event_count%22%3A2%2C%22os%22%3A%22MacOS%22%2C%22browserFamily%22%3A%22Chrome%22%2C%22version%22%3A%221d920cd907%22%2C%22event_id%22%3A%227a8ac5a7-bfa8-4359-b307-baa4ff2ee66e%22%2C%22deploy_status%22%3A%22main%22%2C%22browserClassification%22%3A%22modern%22%2C%22browser_classification_v2%22%3A%222024%22%2C%22connection_rtt%22%3A%2250%22%2C%22connection_downlink%22%3A%221.6%22%2C%22connection_effective_type%22%3A%224g%22%2C%22key%22%3A%22pk_test_51RpNgvCld7bcCt6Hc7r1nrN3gjZE3dTroaFJFFnQeo0tEUr2zDR8QAaoJsGhcDz9dLJ5vLWyoZggxtgwnMTEgV4y00XyIWk5Gg%22%2C%22key_mode%22%3A%22test%22%2C%22referrer%22%3A%22http%3A%2F%2Flocalhost%3A3002%22%2C%22stripe_js_id%22%3A%22043984b8-d84e-4d15-a412-12e8b8e6b851%22%2C%22stripe_obj_id%22%3A%22sobj-eeda9882-7189-4315-9952-347a65622997%22%2C%22controller_load_time%22%3A1757571241090%2C%22stripe_js_release_train%22%3A%22basil%22%2C%22wrapper%22%3A%22unknown%22%2C%22es_module%22%3A%22true%22%2C%22es_module_version%22%3A%227.9.0%22%2C%22deploy_status_time_to_fetch_ms%22%3A%2254%22%2C%22deploy_status_fetch_failed%22%3A%22false%22%2C%22cdn_name%22%3A%22Fastly%22%2C%22cdn_pop_dc%22%3A%22CHI%22%2C%22frame_width%22%3A1280%7D%2C%7B%22event_name%22%3A%22elements.init_timings%22%2C%22created%22%3A1757571241315%2C%22batching_enabled%22%3Atrue%2C%22event_count%22%3A3%2C%22os%22%3A%22MacOS%22%2C%22browserFamily%22%3A%22Chrome%22%2C%22version%22%3A%221d920cd907%22%2C%22event_id%22%3A%22711f404f-b79b-479c-9479-fc0d7a3c16ec%22%2C%22deploy_status%22%3A%22main%22%2C%22browserClassification%22%3A%22modern%22%2C%22browser_classification_v2%22%3A%222024%22%2C%22connection_rtt%22%3A%2250%22%2C%22connection_downlink%22%3A%221.6%22%2C%22connection_effective_type%22%3A%224g%22%2C%22key%22%3A%22pk_test_51RpNgvCld7bcCt6Hc7r1nrN3gjZE3dTroaFJFFnQeo0tEUr2zDR8QAaoJsGhcDz9dLJ5vLWyoZggxtgwnMTEgV4y00XyIWk5Gg%22%2C%22key_mode%22%3A%22test%22%2C%22referrer%22%3A%22http%3A%2F%2Flocalhost%3A3002%22%2C%22stripe_js_id%22%3A%22043984b8-d84e-4d15-a412-12e8b8e6b851%22%2C%22stripe_obj_id%22%3A%22sobj-eeda9882-7189-4315-9952-347a65622997%22%2C%22controller_load_time%22%3A1757571241090%2C%22stripe_js_release_train%22%3A%22basil%22%2C%22wrapper%22%3A%22unknown%22%2C%22es_module%22%3A%22true%22%2C%22es_module_version%22%3A%227.9.0%22%2C%22deploy_status_time_to_fetch_ms%22%3A%2254%22%2C%22deploy_status_fetch_failed%22%3A%22false%22%2C%22cdn_name%22%3A%22Fastly%22%2C%22cdn_pop_dc%22%3A%22CHI%22%2C%22frame_width%22%3A1280%2C%22element%22%3A%22outer%22%2C%22match_frame%22%3A%22true%22%2C%22until_first_create%22%3A12%2C%22until_first_load%22%3A296%2C%22stripe_create_duration%22%3A284%2C%22stripe_js_init_duration%22%3A12%2C%22resource_timings-controller-with-preconnect.html-raw_size%22%3A667%2C%22resource_timings-controller-with-preconnect.html-transfer_size%22%3A707%2C%22resource_timings-controller-with-preconnect.html-duration%22%3A63%2C%22controller_init_delay%22%3A0%2C%22controller_init_strategy%22%3A%22eager%22%2C%22controller-resource_timings-shared.js-raw_size%22%3A750707%2C%22controller-resource_timings-shared.js-transfer_size%22%3A163193%2C%22controller-resource_timings-shared.js-duration%22%3A54%2C%22controller-resource_timings-controller-with-preconnect.js-raw_size%22%3A1021023%2C%22controller-resource_timings-controller-with-preconnect.js-transfer_size%22%3A222731%2C%22controller-resource_timings-controller-with-preconnect.js-duration%22%3A55%7D%5D"
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:02.240Z",
+      "url": "https://m.stripe.com/6",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "x-stripe-proxy-response": "upstream",
+        "access-control-allow-credentials": "true",
+        "x-content-type-options": "nosniff",
+        "x-stripe-server-rpc-duration-micros": "3469",
+        "access-control-allow-origin": "https://m.stripe.network",
+        "content-length": "156",
+        "date": "Thu, 11 Sep 2025 06:14:02 GMT",
+        "content-type": "application/json;charset=utf-8",
+        "server": "nginx",
+        "access-control-allow-headers": "Content-Type"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:02.317Z",
+      "url": "https://r.stripe.com/b",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-stripe-proxy-response": "upstream",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-methods": "POST",
+        "access-control-allow-origin": "https://js.stripe.com",
+        "x-stripe-server-rpc-duration-micros": "2260",
+        "content-length": "0",
+        "date": "Thu, 11 Sep 2025 06:14:02 GMT",
+        "content-type": "text/plain",
+        "server": "nginx"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:02.317Z",
+      "url": "https://r.stripe.com/b",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-stripe-proxy-response": "upstream",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-methods": "POST",
+        "access-control-allow-origin": "https://js.stripe.com",
+        "x-stripe-server-rpc-duration-micros": "2534",
+        "content-length": "0",
+        "date": "Thu, 11 Sep 2025 06:14:02 GMT",
+        "content-type": "text/plain",
+        "server": "nginx"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:02.841Z",
+      "url": "http://localhost:3002/portal?_rsc=pmmii",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "x-nextjs-rewritten-query": "_character=lexi",
+        "content-encoding": "gzip",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:02 GMT",
+        "x-middleware-rewrite": "/portal?_character=lexi",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+        "x-character-name": "Lexi",
+        "content-type": "text/x-component"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:02.868Z",
+      "url": "http://localhost:3002/journal?_rsc=pmmii",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "x-nextjs-rewritten-query": "_character=lexi",
+        "content-encoding": "gzip",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:02 GMT",
+        "x-middleware-rewrite": "/journal?_character=lexi",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+        "x-character-name": "Lexi",
+        "content-type": "text/x-component"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:02.890Z",
+      "url": "http://localhost:3002/dashboard?_rsc=pmmii",
+      "status": 200,
+      "statusText": "OK",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "x-nextjs-rewritten-query": "_character=lexi",
+        "content-encoding": "gzip",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:02 GMT",
+        "x-middleware-rewrite": "/dashboard?_character=lexi",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+        "x-character-name": "Lexi",
+        "content-type": "text/x-component"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:02.897Z",
+      "url": "http://localhost:3002/_next/static/chunks/app-pages-internals.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:03.240Z",
+      "url": "https://r.stripe.com/b",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "https://js.stripe.com/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "accept": "application/json",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/x-www-form-urlencoded",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": "client_id=stripe-js&num_requests=1&events=%5B%7B%22event_name%22%3A%22elements.metricscontroller.timings%22%2C%22created%22%3A1757571242236%2C%22batching_enabled%22%3Atrue%2C%22event_count%22%3A4%2C%22os%22%3A%22MacOS%22%2C%22browserFamily%22%3A%22Chrome%22%2C%22version%22%3A%221d920cd907%22%2C%22event_id%22%3A%22c547705e-1ef1-4a44-918c-60af916a890f%22%2C%22deploy_status%22%3A%22main%22%2C%22browserClassification%22%3A%22modern%22%2C%22browser_classification_v2%22%3A%222024%22%2C%22connection_rtt%22%3A%2250%22%2C%22connection_downlink%22%3A%221.6%22%2C%22connection_effective_type%22%3A%224g%22%2C%22key%22%3A%22pk_test_51RpNgvCld7bcCt6Hc7r1nrN3gjZE3dTroaFJFFnQeo0tEUr2zDR8QAaoJsGhcDz9dLJ5vLWyoZggxtgwnMTEgV4y00XyIWk5Gg%22%2C%22key_mode%22%3A%22test%22%2C%22referrer%22%3A%22http%3A%2F%2Flocalhost%3A3002%22%2C%22stripe_js_id%22%3A%22043984b8-d84e-4d15-a412-12e8b8e6b851%22%2C%22stripe_obj_id%22%3A%22sobj-eeda9882-7189-4315-9952-347a65622997%22%2C%22controller_load_time%22%3A1757571241090%2C%22stripe_js_release_train%22%3A%22basil%22%2C%22wrapper%22%3A%22unknown%22%2C%22es_module%22%3A%22true%22%2C%22es_module_version%22%3A%227.9.0%22%2C%22deploy_status_time_to_fetch_ms%22%3A%2254%22%2C%22deploy_status_fetch_failed%22%3A%22false%22%2C%22cdn_name%22%3A%22Fastly%22%2C%22cdn_pop_dc%22%3A%22CHI%22%2C%22frame_width%22%3A1280%2C%22timeout%22%3A%22false%22%2C%22delta%22%3A%22921%22%2C%22afs%22%3A%22true%22%2C%22isCheckout%22%3A%22false%22%2C%22isGuacamole%22%3A%22false%22%7D%5D"
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:03.299Z",
+      "url": "https://r.stripe.com/b",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-stripe-proxy-response": "upstream",
+        "access-control-allow-credentials": "true",
+        "access-control-allow-methods": "POST",
+        "access-control-allow-origin": "https://js.stripe.com",
+        "x-stripe-server-rpc-duration-micros": "2450",
+        "content-length": "0",
+        "date": "Thu, 11 Sep 2025 06:14:03 GMT",
+        "content-type": "text/plain",
+        "server": "nginx"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:04.367Z",
+      "url": "http://localhost:3002/_next/static/chunks/app-pages-internals.js",
+      "status": 404,
+      "statusText": "Not Found",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "link": "</_next/static/media/e4af272ccee01ff0-s.p.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\", </avatars/lexi.png>; rel=preload; as=\"image\"",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "connection": "keep-alive",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:04 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch, Accept-Encoding",
+        "x-powered-by": "Next.js"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:04.532Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "\"t3pa19cj8359c\"",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:04 GMT",
+        "x-middleware-rewrite": "/api/entitlements?character=lexi&_character=lexi",
+        "x-powered-by": "Next.js",
+        "x-character-name": "Lexi",
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:04.532Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "\"t3pa19cj8359c\"",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:04 GMT",
+        "x-middleware-rewrite": "/api/entitlements?character=lexi&_character=lexi",
+        "x-powered-by": "Next.js",
+        "x-character-name": "Lexi",
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:05.941Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:06.136Z",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-HCRWE15MBR&gtm=45je5991v9228129087z89226691275za200zb9226691275zd9226691275&_p=1757571240763&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&gdid=dMWZhNz&cid=1411349911.1757571241&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=macOS&uapv=14.1.1&uaw=0&are=1&frm=0&pscdl=denied&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104630779~104630781~104684208~104684211~104948813~105367987~105367989~105426769~105426771~115616986&sid=1757571241&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fchat&dt=Chat%20with%20Lexi%20-%20Your%20AI%20Companion&_tu=CA&en=Page%20views&_et=1&tfd=5711",
+      "method": "POST",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:06.176Z",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-HCRWE15MBR&gtm=45je5991v9228129087z89226691275za200zb9226691275zd9226691275&_p=1757571240763&gcs=G100&gcd=13p3p3p3p5l1&npa=1&dma_cps=-&dma=0&gdid=dMWZhNz&cid=1411349911.1757571241&ul=en-us&sr=1280x720&uaa=arm&uab=64&uafvl=Not%253DA%253FBrand%3B24.0.0.0%7CChromium%3B140.0.7339.16&uamb=0&uam=&uap=macOS&uapv=14.1.1&uaw=0&are=1&frm=0&pscdl=denied&_s=2&tag_exp=101509157~103116026~103200004~103233427~104527906~104528500~104630779~104630781~104684208~104684211~104948813~105367987~105367989~105426769~105426771~115616986&sid=1757571241&sct=1&seg=0&dl=http%3A%2F%2Flocalhost%2Fchat&dt=Chat%20with%20Lexi%20-%20Your%20AI%20Companion&_tu=CA&en=Page%20views&_et=1&tfd=5711",
+      "status": 204,
+      "statusText": "",
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "pragma": "no-cache",
+        "cross-origin-resource-policy": "cross-origin",
+        "access-control-allow-credentials": "true",
+        "content-security-policy-report-only": "script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascnsrsggc:102:0",
+        "report-to": "{\"group\":\"ascnsrsggc:102:0\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/scaffolding/ascnsrsggc:102:0\"}],}",
+        "expires": "Fri, 01 Jan 1990 00:00:00 GMT",
+        "access-control-allow-origin": "http://localhost:3002",
+        "cross-origin-opener-policy-report-only": "same-origin; report-to=ascnsrsggc:102:0",
+        "content-length": "0",
+        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+        "date": "Thu, 11 Sep 2025 06:14:06 GMT",
+        "content-type": "text/plain",
+        "server": "Golfe2"
+      }
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:06.229Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "\"txvmrgyelb58q\"",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:06 GMT",
+        "x-middleware-rewrite": "/api/entitlements?character=lexi&_character=lexi",
+        "x-powered-by": "Next.js",
+        "x-character-name": "Lexi",
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:06.320Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/trusted-types-checker-efd8cf45ce422659c098993bfc62531b.js",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:06.333Z",
+      "url": "https://js.stripe.com/v3/fingerprinted/js/trusted-types-checker-efd8cf45ce422659c098993bfc62531b.js",
+      "status": 200,
+      "statusText": "",
+      "headers": {
+        "x-request-id": "bd086275-b9e6-4cd2-af6d-60f2c691e15c",
+        "content-encoding": "br",
+        "etag": "\"96f5b26d366f47393b3ff36fe7471474\"",
+        "age": "174114",
+        "x-content-type-options": "nosniff",
+        "alt-svc": "h3=\":443\";ma=86400,h3-29=\":443\";ma=86400,h3-27=\":443\";ma=86400",
+        "x-cache": "HIT",
+        "date": "Thu, 11 Sep 2025 06:14:06 GMT",
+        "last-modified": "Thu, 21 Dec 2023 18:13:43 GMT",
+        "content-type": "text/javascript; charset=utf-8",
+        "x-served-by": "cache-chi-kigq8000174-CHI",
+        "x-cache-hits": "9527",
+        "vary": "Accept-Encoding",
+        "strict-transport-security": "max-age=31556926; includeSubDomains; preload",
+        "cache-control": "max-age=31536000",
+        "timing-allow-origin": "*",
+        "via": "1.1 varnish",
+        "accept-ranges": "bytes",
+        "access-control-allow-origin": "*",
+        "content-length": "127",
+        "server": "Fastly"
+      }
+    },
+    {
+      "type": "request",
+      "timestamp": "2025-09-11T06:14:08.638Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "method": "GET",
+      "headers": {
+        "sec-ch-ua-platform": "\"macOS\"",
+        "referer": "http://localhost:3002/chat",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Not=A?Brand\";v=\"24\", \"Chromium\";v=\"140\"",
+        "content-type": "application/json",
+        "sec-ch-ua-mobile": "?0"
+      },
+      "postData": null
+    },
+    {
+      "type": "response",
+      "timestamp": "2025-09-11T06:14:08.884Z",
+      "url": "http://localhost:3002/api/entitlements?character=lexi",
+      "status": 500,
+      "statusText": "Internal Server Error",
+      "headers": {
+        "transfer-encoding": "chunked",
+        "x-character-key": "lexi",
+        "content-security-policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com https://checkout.stripe.com https://www.googletagmanager.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.vercel.app; font-src 'self' https://fonts.gstatic.com https://js.stripe.com https://*.vercel.app; img-src 'self' data: blob: https: http://imgsct.cookiebot.com https://*.vercel.app; media-src 'self' data: blob: https: https://*.vercel.app; connect-src 'self' https://api.stripe.com https://checkout.stripe.com https://*.supabase.co wss://*.supabase.co https://www.google-analytics.com https://consentcdn.cookiebot.com https://consent.cookiebot.com https://*.vercel.app wss://*.vercel.app https://api.elevenlabs.io https://api.openai.com https://openrouter.ai; frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://consentcdn.cookiebot.com https://*.vercel.app; worker-src 'self' blob:; child-src 'self' blob:",
+        "cache-control": "no-store, must-revalidate",
+        "content-encoding": "gzip",
+        "etag": "\"txvmrgyelb58q\"",
+        "connection": "keep-alive",
+        "x-hostname": "localhost:3002",
+        "keep-alive": "timeout=5",
+        "date": "Thu, 11 Sep 2025 06:14:08 GMT",
+        "x-middleware-rewrite": "/api/entitlements?character=lexi&_character=lexi",
+        "x-powered-by": "Next.js",
+        "x-character-name": "Lexi",
+        "content-type": "text/html; charset=utf-8",
+        "vary": "Accept-Encoding"
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "error": "locator.count: Unknown engine \"text*\" while parsing selector text*=\"Database error\"",
+  "errors": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 ()",
+      "timestamp": "2025-09-11T06:16:19.342Z"
+    }
+  ],
+  "networkLogs": [
+    {
+      "url": "https://copjpqtwdqrclfrwoaeb.supabase.co/auth/v1/signup?redirect_to=http%3A%2F%2Flocalhost%3A3002%2Fauth%2Fcallback",
+      "status": 500,
+      "timestamp": "2025-09-11T06:16:19.341Z"
+    }
+  ],
+  "timestamp": "2025-09-11T06:16:19.533Z"
+}

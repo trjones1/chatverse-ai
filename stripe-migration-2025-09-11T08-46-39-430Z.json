@@ -1,0 +1,109 @@
+{
+  "timestamp": "2025-09-11T08:46:39.430Z",
+  "summary": {
+    "products_created": 8,
+    "prices_created": 8,
+    "errors": 0
+  },
+  "products": [
+    {
+      "id": "prod_T2AUviB9NispKK",
+      "name": "✨ Premium Chat – Monthly Subscription",
+      "voice_credits": "0"
+    },
+    {
+      "id": "prod_T2AUjxNK2TSVUd",
+      "name": "💎 Premium+ Chat – Monthly Subscription",
+      "voice_credits": "0"
+    },
+    {
+      "id": "prod_T2AUl5mvBMk9E5",
+      "name": "🌙 Nyx Premium+ Chat - Monthly Subscription",
+      "voice_credits": "0"
+    },
+    {
+      "id": "prod_T2AUhRgfduXp74",
+      "name": "👔 Dominic Premium+ Chat - Monthly Subscription",
+      "voice_credits": "0"
+    },
+    {
+      "id": "prod_T2AUur53NYKt76",
+      "name": "🎙️ Voice Pack – 10 Credits",
+      "voice_credits": "10"
+    },
+    {
+      "id": "prod_T2AUOhMvc4q251",
+      "name": "🎙️ Voice Pack – 25 Credits",
+      "voice_credits": "25"
+    },
+    {
+      "id": "prod_T2AUjdaHfv90g7",
+      "name": "🎙️ Voice Pack – 50 Credits",
+      "voice_credits": "50"
+    },
+    {
+      "id": "prod_T2AU4L4pLn0dcg",
+      "name": "🎙️ Voice Pack – 100 Credits",
+      "voice_credits": "100"
+    }
+  ],
+  "prices": [
+    {
+      "id": "price_1S669DEH19PXRnEQnFe7suSZ",
+      "product_id": "prod_T2AUviB9NispKK",
+      "amount": 999,
+      "currency": "usd",
+      "interval": "month"
+    },
+    {
+      "id": "price_1S669EEH19PXRnEQQMSviydY",
+      "product_id": "prod_T2AUjxNK2TSVUd",
+      "amount": 2999,
+      "currency": "usd",
+      "interval": "month"
+    },
+    {
+      "id": "price_1S669FEH19PXRnEQSimrxexy",
+      "product_id": "prod_T2AUl5mvBMk9E5",
+      "amount": 3499,
+      "currency": "usd",
+      "interval": "month"
+    },
+    {
+      "id": "price_1S669GEH19PXRnEQHMm4GwsN",
+      "product_id": "prod_T2AUhRgfduXp74",
+      "amount": 3499,
+      "currency": "usd",
+      "interval": "month"
+    },
+    {
+      "id": "price_1S669HEH19PXRnEQ35y5aqIv",
+      "product_id": "prod_T2AUur53NYKt76",
+      "amount": 999,
+      "currency": "usd",
+      "interval": "one_time"
+    },
+    {
+      "id": "price_1S669IEH19PXRnEQZ6IjmdW7",
+      "product_id": "prod_T2AUOhMvc4q251",
+      "amount": 2299,
+      "currency": "usd",
+      "interval": "one_time"
+    },
+    {
+      "id": "price_1S669JEH19PXRnEQD3XiHmBx",
+      "product_id": "prod_T2AUjdaHfv90g7",
+      "amount": 3999,
+      "currency": "usd",
+      "interval": "one_time"
+    },
+    {
+      "id": "price_1S669KEH19PXRnEQJPq1aMNA",
+      "product_id": "prod_T2AU4L4pLn0dcg",
+      "amount": 7499,
+      "currency": "usd",
+      "interval": "one_time"
+    }
+  ],
+  "errors": []
+}

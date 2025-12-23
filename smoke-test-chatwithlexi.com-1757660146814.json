@@ -1,0 +1,23 @@
+{
+  "domain": "chatwithlexi.com",
+  "startTime": 1757660144838,
+  "environment": "preview",
+  "tests": [
+    {
+      "name": "Site Accessibility",
+      "success": false,
+      "duration": 644,
+      "error": "HTTP 404: "
+    }
+  ],
+  "success": false,
+  "errors": [
+    "HTTP 404: "
+  ],
+  "duration": 1976,
+  "timestamp": "2025-09-12T06:55:46.814Z",
+  "ciInfo": {
+    "environment": "preview",
+    "deploymentUrl": "https://lexi-bot-git-fix-character-specific-chec-trjones1s-projects.vercel.app"
+  }
+}

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Rate Limiting Test Report - October 15, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .metadata {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .metadata-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .metadata-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .metadata-value {
+            font-size: 16px;
+            color: #212529;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #1a202c;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .critical-alert {
+            background: #FEE2E2;
+            border-left: 4px solid #DC2626;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .critical-alert h3 {
+            color: #991B1B;
+            font-size: 20px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .critical-alert p {
+            color: #7F1D1D;
+            line-height: 1.8;
+        }
+
+        .finding-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .finding-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .severity-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .severity-critical {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+
+        .severity-high {
+            background: #FED7AA;
+            color: #9A3412;
+        }
+
+        .finding-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a202c;
+            flex: 1;
+        }
+
+        .finding-description {
+            color: #4a5568;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .evidence-section {
+            background: #f8fafc;
+            padding: 16px;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .evidence-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+
+        .screenshot-container {
+            margin-top: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .screenshot-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .step-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .step-item {
+            counter-increment: step-counter;
+            margin-bottom: 24px;
+            padding-left: 48px;
+            position: relative;
+        }
+
+        .step-item::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1a202c;
+        }
+
+        .step-description {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .recommendation-box {
+            background: #DBEAFE;
+            border-left: 4px solid #2563EB;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+
+        .recommendation-box h4 {
+            color: #1E3A8A;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .recommendation-box ul {
+            margin-left: 20px;
+            color: #1E40AF;
+        }
+
+        .recommendation-box li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .summary-value {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .summary-label {
+            font-size: 14px;
+            color: #6c757d;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .status-failed {
+            color: #DC2626;
+        }
+
+        .status-warning {
+            color: #D97706;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Database Rate Limiting Test Report</h1>
+            <p class="subtitle">Testing database-based rate limiting implementation to fix reload exploit</p>
+        </header>
+
+        <div class="metadata">
+            <div class="metadata-grid">
+                <div class="metadata-item">
+                    <span class="metadata-label">Test Date</span>
+                    <span class="metadata-value">October 15, 2025</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="metadata-label">Test Environment</span>
+                    <span class="metadata-value">localhost:3001</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="metadata-label">Test Type</span>
+                    <span class="metadata-value">Functional QA</span>
+                </div>
+                <div class="metadata-item">
+                    <span class="metadata-label">Overall Status</span>
+                    <span class="metadata-value status-failed">FAILED</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <div class="critical-alert">
+                    <h3>🚨 CRITICAL BUG IDENTIFIED</h3>
+                    <p><strong>Database rate limiting is not working.</strong> The rate limit count is not being incremented when messages are sent, which means the exploit has NOT been fixed. Users can still send unlimited messages by reloading the page.</p>
+                    <p style="margin-top: 12px;"><strong>Impact:</strong> The fix that was intended to prevent users from bypassing the 5-message limit by reloading the page is not functional. The original exploit remains active.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Executive Summary</h2>
+
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-value status-failed">0/1</div>
+                        <div class="summary-label">Tests Passed</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-value status-failed">1</div>
+                        <div class="summary-label">Critical Bugs</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-value">5</div>
+                        <div class="summary-label">Test Steps</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-value status-failed">No</div>
+                        <div class="summary-label">Fix Verified</div>
+                    </div>
+                </div>
+
+                <p style="line-height: 1.8; color: #4a5568;">
+                    The database-based rate limiting system was implemented to fix a critical exploit where users could bypass the 5-message daily limit by simply reloading the page. Testing revealed that while the code exists, the rate limit counter is not being incremented in the database, making the fix completely non-functional.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Test Steps Executed</h2>
+
+                <ol class="step-list">
+                    <li class="step-item">
+                        <div class="step-title">Initial Page Load</div>
+                        <div class="step-description">
+                            Navigated to http://localhost:3001 and cleared browser storage to start with a fresh session.
+                            <strong>Result:</strong> Page loaded successfully, showing "5 messages remaining" - correct initial state.
+                        </div>
+                    </li>
+
+                    <li class="step-item">
+                        <div class="step-title">Send First Message</div>
+                        <div class="step-description">
+                            Clicked conversation starter "Let's flirt a little 😘" to send first message.
+                            <strong>Result:</strong> Message sent successfully, AI responded. However, count still shows "5 messages remaining" instead of "4 messages remaining".
+                        </div>
+                    </li>
+
+                    <li class="step-item">
+                        <div class="step-title">Check Rate Limit API Response</div>
+                        <div class="step-description">
+                            Examined browser console logs for rate limit API response.
+                            <strong>Result:</strong> API returned <code>{remaining: 5, limit: 5, count: 0}</code> - count is 0 when it should be 1.
+                        </div>
+                    </li>
+
+                    <li class="step-item">
+                        <div class="step-title">Code Analysis</div>
+                        <div class="step-description">
+                            Reviewed <code>/app/api/chat/route.ts</code> and <code>/lib/rate-limiting-db.ts</code> to understand the implementation.
+                            <strong>Result:</strong> Code calls database rate limiting with proper parameters, but the PostgreSQL function may not exist.
+                        </div>
+                    </li>
+
+                    <li class="step-item">
+                        <div class="step-title">Root Cause Identification</div>
+                        <div class="step-description">
+                            Determined that the <code>increment_rate_limit</code> PostgreSQL function is likely not created in the database.
+                            <strong>Result:</strong> The RPC call fails silently and falls back to manual upsert, which also appears to be failing.
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Critical Findings</h2>
+
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <span class="severity-badge severity-critical">Critical</span>
+                        <span class="finding-title">Rate Limit Count Not Incrementing</span>
+                    </div>
+                    <div class="finding-description">
+                        After sending a message through the chat API, the rate limit count remains at 0 instead of incrementing to 1. This means the database-based rate limiting system is completely non-functional.
+                    </div>
+
+                    <div class="evidence-section">
+                        <div class="evidence-title">Console Log Evidence:</div>
+                        <div class="code-block">✅ useRateLimitStatus: Received status: {
+    remaining: 5,
+    limit: 5,
+    count: 0,  ← SHOULD BE 1 AFTER SENDING MESSAGE
+    resetTime: 1760644807373,
+    isBlocked: false
+}</div>
+                    </div>
+
+                    <div class="evidence-section">
+                        <div class="evidence-title">Expected vs Actual Behavior:</div>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr style="background: #f1f5f9;">
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #e2e8f0;">Action</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #e2e8f0;">Expected Count</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #e2e8f0;">Actual Count</th>
+                                    <th style="padding: 12px; text-align: left; border: 1px solid #e2e8f0;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0;">Initial load</td>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0;">0</td>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0;">0</td>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0; color: #059669;">✓ Pass</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0;">After 1st message</td>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0;">1</td>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0;">0</td>
+                                    <td style="padding: 12px; border: 1px solid #e2e8f0; color: #DC2626;">✗ Fail</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="recommendation-box">
+                        <h4>Recommended Fix:</h4>
+                        <ul>
+                            <li>Verify that the <code>increment_rate_limit</code> PostgreSQL function exists in the database</li>
+                            <li>If missing, run the <code>createRateLimitFunction()</code> to create it</li>
+                            <li>Check that the <code>rate_limits</code> table exists with proper schema</li>
+                            <li>Add better error logging to identify why the RPC call is failing</li>
+                            <li>Test the fallback manual upsert logic to ensure it works when RPC fails</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-header">
+                        <span class="severity-badge severity-high">High</span>
+                        <span class="finding-title">Original Exploit Still Active</span>
+                    </div>
+                    <div class="finding-description">
+                        Since the rate limit count is not being persisted, users can still bypass the 5-message limit by reloading the page. The exploit that this fix was meant to address remains fully functional.
+                    </div>
+
+                    <div class="evidence-section">
+                        <div class="evidence-title">Impact Assessment:</div>
+                        <ul style="margin-left: 20px; color: #4a5568; line-height: 1.8;">
+                            <li><strong>Business Impact:</strong> Users can consume unlimited AI API credits without paying</li>
+                            <li><strong>Revenue Impact:</strong> Free users have no incentive to upgrade to premium</li>
+                            <li><strong>Trust Impact:</strong> Rate limiting appears to be a cosmetic UI feature only</li>
+                            <li><strong>Technical Debt:</strong> Database-based solution implemented but non-functional</li>
+                        </ul>
+                    </div>
+
+                    <div class="recommendation-box">
+                        <h4>Immediate Action Required:</h4>
+                        <ul>
+                            <li>Do NOT deploy this code to production - the fix is not working</li>
+                            <li>Complete database setup (table + function creation) before testing again</li>
+                            <li>Add integration tests to verify rate limiting actually persists</li>
+                            <li>Consider adding a health check endpoint to verify database rate limiting is functional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Technical Analysis</h2>
+
+                <div class="finding-description" style="margin-bottom: 20px;">
+                    <strong>Root Cause:</strong> The database-based rate limiting system depends on a PostgreSQL stored procedure called <code>increment_rate_limit</code>. This function needs to be created in the database before the rate limiting can work. The code attempts to call this function via RPC, and when it fails, it falls back to a manual upsert operation. However, the fallback also appears to be failing silently.
+                </div>
+
+                <div class="code-block">// From /lib/rate-limiting-db.ts line 150-157
+const { data, error } = await supabase.rpc('increment_rate_limit', {
+  p_id: key,
+  p_user_id: userId,
+  p_endpoint: endpoint,
+  p_character: character,
+  p_limit: limit,
+  p_reset_time: resetTime.toISOString()
+});
+// ↑ This RPC call is failing because the function doesn't exist</div>
+
+                <div style="margin-top: 20px;">
+                    <strong>Code Flow Analysis:</strong>
+                    <ol style="margin-left: 20px; color: #4a5568; line-height: 1.8; margin-top: 12px;">
+                        <li>Chat API calls <code>rateLimit()</code> without <code>readOnly: true</code></li>
+                        <li><code>rateLimit()</code> delegates to <code>dbRateLimitCheck()</code></li>
+                        <li><code>dbRateLimitCheck()</code> attempts to call <code>supabase.rpc('increment_rate_limit')</code></li>
+                        <li>RPC call fails (function doesn't exist in database)</li>
+                        <li>Code attempts fallback manual upsert (lines 163-200)</li>
+                        <li>Fallback also fails or returns incorrect data</li>
+                        <li>Returns safe default: <code>{count: 1, allowed: true}</code></li>
+                        <li>Next request shows count: 0 (data not persisted)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Screenshots</h2>
+
+                <div class="screenshot-container">
+                    <p style="padding: 12px; background: #f8fafc; font-size: 14px; font-weight: 600; border-bottom: 1px solid #e2e8f0;">
+                        Initial Page Load - Showing 5 Messages Remaining
+                    </p>
+                    <p style="padding: 12px; color: #6c757d; font-size: 13px;">
+                        Screenshot: /Users/tramel/code/lexi-bot/.playwright-mcp/initial-page-load.png
+                    </p>
+                </div>
+
+                <div class="screenshot-container" style="margin-top: 20px;">
+                    <p style="padding: 12px; background: #f8fafc; font-size: 14px; font-weight: 600; border-bottom: 1px solid #e2e8f0;">
+                        After First Message - Still Showing 5 Messages Remaining (BUG!)
+                    </p>
+                    <p style="padding: 12px; color: #6c757d; font-size: 13px;">
+                        Screenshot: /Users/tramel/code/lexi-bot/.playwright-mcp/after-first-message.png
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">Conclusion & Recommendations</h2>
+
+                <div class="critical-alert">
+                    <h3>⚠️ FIX NOT VERIFIED - DO NOT DEPLOY</h3>
+                    <p>The database-based rate limiting fix is NOT working. The code implementation exists but the database components (table and stored procedure) are either missing or not functioning correctly.</p>
+                </div>
+
+                <div class="recommendation-box" style="margin-top: 20px;">
+                    <h4>Required Steps Before Re-testing:</h4>
+                    <ul>
+                        <li><strong>Step 1:</strong> Run database migration to create <code>rate_limits</code> table</li>
+                        <li><strong>Step 2:</strong> Run <code>createRateLimitFunction()</code> to create PostgreSQL stored procedure</li>
+                        <li><strong>Step 3:</strong> Verify table and function exist in database using SQL query</li>
+                        <li><strong>Step 4:</strong> Add comprehensive error logging to track RPC failures</li>
+                        <li><strong>Step 5:</strong> Test the increment operation directly via SQL to verify it works</li>
+                        <li><strong>Step 6:</strong> Re-run this QA test to verify rate limiting now persists</li>
+                        <li><strong>Step 7:</strong> Test the reload exploit specifically to confirm it's fixed</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 30px; padding: 20px; background: #f1f5f9; border-radius: 8px;">
+                    <p style="font-size: 14px; color: #4a5568; line-height: 1.8;">
+                        <strong>Test Conducted By:</strong> Claude (Claudio - UX/QA Navigator)<br>
+                        <strong>Test Framework:</strong> Playwright MCP with manual verification<br>
+                        <strong>Report Generated:</strong> October 15, 2025 3:00 PM CDT<br>
+                        <strong>Evidence Files:</strong> Stored in /Users/tramel/code/lexi-bot/.playwright-mcp/<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

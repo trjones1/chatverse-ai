@@ -1,0 +1,71 @@
+name: 🧪 PR QA Testing (DISABLED)
+
+on:
+  # Disabled to avoid paid Actions charges
+  # pull_request:
+  #   branches: [ main ]
+  #   paths:
+  #     - 'scripts/**'
+  #     - '.github/workflows/**'
+  #     - 'package.json'
+
+  # Manual trigger disabled
+  # workflow_dispatch:
+
+env:
+  QA_HEADLESS: true
+  QA_TIMEOUT: 60000
+  QA_TAKE_SCREENSHOTS: true
+
+jobs:
+  # Simple smoke test for PR validation
+  pr-comprehensive-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    strategy:
+      matrix:
+        domain: 
+          - chatwithlexi.com
+      fail-fast: false
+    
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📥 Install dependencies
+        run: |
+          npm install
+          npx playwright install chromium
+          npx playwright install-deps chromium
+
+      - name: 🧪 Run comprehensive QA test
+        env:
+          QA_HEADLESS: true
+          QA_TIMEOUT: 30000
+          DEBUG: true
+        run: |
+          echo "🔍 Testing domain: ${{ matrix.domain }}"
+          echo "🖥️  System info:"
+          uname -a
+          echo "🌐 Network connectivity test:"
+          curl -I https://${{ matrix.domain }} || echo "❌ Domain not reachable"
+          echo "🎭 Playwright version:"
+          npx playwright --version
+          echo "🚀 Running comprehensive QA test..."
+          node scripts/simple-qa-runner.js ${{ matrix.domain }}
+
+      - name: 📊 Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pr-comprehensive-test-results-${{ matrix.domain }}
+          path: |
+            qa-results-*.json
+            screenshots/
+          retention-days: 3

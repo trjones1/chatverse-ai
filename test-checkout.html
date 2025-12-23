@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Premium CTA</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <h1>Test Premium CTA Button Click</h1>
+    <button id="testBtn" onclick="testCheckout()">Test Premium CTA</button>
+    <div id="output"></div>
+
+    <script>
+        function testCheckout() {
+            console.log('Button clicked!');
+            document.getElementById('output').innerHTML = 'Button click registered!';
+            
+            // Test the same flow as the real button
+            fetch('/api/checkout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ tier: 'sub_sfw' })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('API Response:', data);
+                document.getElementById('output').innerHTML += '<br>API Response: ' + JSON.stringify(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('output').innerHTML += '<br>Error: ' + error;
+            });
+        }
+    </script>
+</body>
+</html>

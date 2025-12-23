@@ -1,0 +1,271 @@
+{
+  "timestamp": "2025-09-11T20:54:00.686Z",
+  "products": [
+    {
+      "id": "prod_T2MDlW9lAJDHS0",
+      "name": "💖 Lexi Premium",
+      "metadata": {
+        "character": "lexi",
+        "tier": "premium",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDz3UZIAbwSs",
+      "name": "💖 Lexi Premium+",
+      "metadata": {
+        "character": "lexi",
+        "tier": "premium_plus",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDjCslTXgD02",
+      "name": "🌙 Nyx Premium",
+      "metadata": {
+        "character": "nyx",
+        "tier": "premium",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDSYSyh3aWxf",
+      "name": "🌙 Nyx Premium+",
+      "metadata": {
+        "character": "nyx",
+        "tier": "premium_plus",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDlA2M0ZVp0Q",
+      "name": "🌸 Aiko Premium",
+      "metadata": {
+        "character": "aiko",
+        "tier": "premium",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MD5nMCPAAv2F",
+      "name": "🌸 Aiko Premium+",
+      "metadata": {
+        "character": "aiko",
+        "tier": "premium_plus",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDFYJXDLzmI9",
+      "name": "🔥 Chase Premium",
+      "metadata": {
+        "character": "chase",
+        "tier": "premium",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDUhqh5oeKUT",
+      "name": "🔥 Chase Premium+",
+      "metadata": {
+        "character": "chase",
+        "tier": "premium_plus",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MD0t0kAgGxLR",
+      "name": "👑 Dominic Premium",
+      "metadata": {
+        "character": "dom",
+        "tier": "premium",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDv7FEsjG70J",
+      "name": "👑 Dominic Premium+",
+      "metadata": {
+        "character": "dom",
+        "tier": "premium_plus",
+        "type": "subscription"
+      }
+    },
+    {
+      "id": "prod_T2MDtYd4AgCuO8",
+      "name": "🎤 Voice Pack - 10 Credits",
+      "metadata": {
+        "credits": "10",
+        "type": "voice_pack"
+      }
+    },
+    {
+      "id": "prod_T2MD0PpjsPTg0N",
+      "name": "🎵 Voice Pack - 25 Credits",
+      "metadata": {
+        "credits": "25",
+        "type": "voice_pack"
+      }
+    },
+    {
+      "id": "prod_T2MDwHR9GTTJoH",
+      "name": "🎶 Voice Pack - 50 Credits",
+      "metadata": {
+        "credits": "50",
+        "type": "voice_pack"
+      }
+    },
+    {
+      "id": "prod_T2MDB344kbnX4D",
+      "name": "🎼 Voice Pack - 100 Credits",
+      "metadata": {
+        "credits": "100",
+        "type": "voice_pack"
+      }
+    }
+  ],
+  "prices": [
+    {
+      "id": "price_1S6HV5EH19PXRnEQUQohAhce",
+      "product": "prod_T2MDlW9lAJDHS0",
+      "unit_amount": 999,
+      "metadata": {
+        "character": "lexi",
+        "tier": "premium"
+      }
+    },
+    {
+      "id": "price_1S6HV6EH19PXRnEQH4isO2LW",
+      "product": "prod_T2MDz3UZIAbwSs",
+      "unit_amount": 3499,
+      "metadata": {
+        "character": "lexi",
+        "tier": "premium_plus"
+      }
+    },
+    {
+      "id": "price_1S6HV6EH19PXRnEQNdxu1Dym",
+      "product": "prod_T2MDjCslTXgD02",
+      "unit_amount": 999,
+      "metadata": {
+        "character": "nyx",
+        "tier": "premium"
+      }
+    },
+    {
+      "id": "price_1S6HV7EH19PXRnEQl1QBoHnR",
+      "product": "prod_T2MDSYSyh3aWxf",
+      "unit_amount": 3499,
+      "metadata": {
+        "character": "nyx",
+        "tier": "premium_plus"
+      }
+    },
+    {
+      "id": "price_1S6HV8EH19PXRnEQ2p6o4TJN",
+      "product": "prod_T2MDlA2M0ZVp0Q",
+      "unit_amount": 999,
+      "metadata": {
+        "character": "aiko",
+        "tier": "premium"
+      }
+    },
+    {
+      "id": "price_1S6HV9EH19PXRnEQr0zkxjdr",
+      "product": "prod_T2MD5nMCPAAv2F",
+      "unit_amount": 3499,
+      "metadata": {
+        "character": "aiko",
+        "tier": "premium_plus"
+      }
+    },
+    {
+      "id": "price_1S6HV9EH19PXRnEQm9khcwV1",
+      "product": "prod_T2MDFYJXDLzmI9",
+      "unit_amount": 999,
+      "metadata": {
+        "character": "chase",
+        "tier": "premium"
+      }
+    },
+    {
+      "id": "price_1S6HVAEH19PXRnEQjwxHmck3",
+      "product": "prod_T2MDUhqh5oeKUT",
+      "unit_amount": 3499,
+      "metadata": {
+        "character": "chase",
+        "tier": "premium_plus"
+      }
+    },
+    {
+      "id": "price_1S6HVAEH19PXRnEQSsvIP9nF",
+      "product": "prod_T2MD0t0kAgGxLR",
+      "unit_amount": 999,
+      "metadata": {
+        "character": "dom",
+        "tier": "premium"
+      }
+    },
+    {
+      "id": "price_1S6HVBEH19PXRnEQuGBhCMxe",
+      "product": "prod_T2MDv7FEsjG70J",
+      "unit_amount": 3499,
+      "metadata": {
+        "character": "dom",
+        "tier": "premium_plus"
+      }
+    },
+    {
+      "id": "price_1S6HVCEH19PXRnEQls1AVAH7",
+      "product": "prod_T2MDtYd4AgCuO8",
+      "unit_amount": 999,
+      "metadata": {
+        "credits": "10",
+        "type": "voice_pack"
+      }
+    },
+    {
+      "id": "price_1S6HVCEH19PXRnEQXyJYKoue",
+      "product": "prod_T2MD0PpjsPTg0N",
+      "unit_amount": 1999,
+      "metadata": {
+        "credits": "25",
+        "type": "voice_pack"
+      }
+    },
+    {
+      "id": "price_1S6HVDEH19PXRnEQdghFsqPG",
+      "product": "prod_T2MDwHR9GTTJoH",
+      "unit_amount": 3499,
+      "metadata": {
+        "credits": "50",
+        "type": "voice_pack"
+      }
+    },
+    {
+      "id": "price_1S6HVEEH19PXRnEQuW0U0EE3",
+      "product": "prod_T2MDB344kbnX4D",
+      "unit_amount": 5999,
+      "metadata": {
+        "credits": "100",
+        "type": "voice_pack"
+      }
+    }
+  ],
+  "environmentVariables": [
+    "LEXI_STRIPE_PRICE_PREMIUM=price_1S6HV5EH19PXRnEQUQohAhce",
+    "LEXI_STRIPE_PRICE_NSFW_PREMIUM=price_1S6HV6EH19PXRnEQH4isO2LW",
+    "NYX_STRIPE_PRICE_PREMIUM=price_1S6HV6EH19PXRnEQNdxu1Dym",
+    "NYX_STRIPE_PRICE_NSFW_PREMIUM=price_1S6HV7EH19PXRnEQl1QBoHnR",
+    "AIKO_STRIPE_PRICE_PREMIUM=price_1S6HV8EH19PXRnEQ2p6o4TJN",
+    "AIKO_STRIPE_PRICE_NSFW_PREMIUM=price_1S6HV9EH19PXRnEQr0zkxjdr",
+    "CHASE_STRIPE_PRICE_PREMIUM=price_1S6HV9EH19PXRnEQm9khcwV1",
+    "CHASE_STRIPE_PRICE_NSFW_PREMIUM=price_1S6HVAEH19PXRnEQjwxHmck3",
+    "DOM_STRIPE_PRICE_PREMIUM=price_1S6HVAEH19PXRnEQSsvIP9nF",
+    "DOM_STRIPE_PRICE_NSFW_PREMIUM=price_1S6HVBEH19PXRnEQuGBhCMxe",
+    "STRIPE_PRICE_VOICE_10=price_1S6HVCEH19PXRnEQls1AVAH7",
+    "STRIPE_PRICE_VOICE_25=price_1S6HVCEH19PXRnEQXyJYKoue",
+    "STRIPE_PRICE_VOICE_50=price_1S6HVDEH19PXRnEQdghFsqPG",
+    "STRIPE_PRICE_VOICE_100=price_1S6HVEEH19PXRnEQuW0U0EE3"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "domain": "--help",
+  "startTime": 1757552335644,
+  "environment": "unknown",
+  "tests": [
+    {
+      "name": "Site Accessibility",
+      "success": false,
+      "duration": 528,
+      "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://--help/\nCall log:\n\u001b[2m  - navigating to \"https://--help/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    }
+  ],
+  "success": false,
+  "errors": [
+    "page.goto: net::ERR_NAME_NOT_RESOLVED at https://--help/\nCall log:\n\u001b[2m  - navigating to \"https://--help/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+  ],
+  "duration": 1639,
+  "timestamp": "2025-09-11T00:58:57.283Z",
+  "ciInfo": {}
+}

@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# AI Girlfriend and Virtual Companion Pages
+Allow: /blog/
+Allow: /about
+Allow: /faq
+Allow: /help
+Allow: /contact
+
+# Character-specific AI girlfriend pages
+Allow: /journal/lexi
+Allow: /journal/nyx
+Allow: /journal/aiko
+Allow: /journal/zaria
+Allow: /journal/chloe
+Allow: /journal/nova
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /auth/
+Disallow: /providers/
+Disallow: /crypto/
+Disallow: /test-*
+Disallow: /sentry-*
+
+# Sitemap location
+Sitemap: https://chatverse.ai/sitemap-index.xml
+Sitemap: https://chatwithlexi.com/sitemap-index.xml
+Sitemap: https://talktonyx.com/sitemap-index.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

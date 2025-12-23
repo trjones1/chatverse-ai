@@ -1,0 +1,62 @@
+{
+  "domain": "chatwithlexi.com",
+  "startTime": 1757552820209,
+  "environment": "unknown",
+  "tests": [
+    {
+      "name": "Site Accessibility",
+      "success": true,
+      "duration": 999,
+      "data": {
+        "status": 200,
+        "title": "Chat with Lexi - Your AI Companion",
+        "url": "https://www.chatwithlexi.com/chat"
+      }
+    },
+    {
+      "name": "Core UI Elements",
+      "success": true,
+      "duration": 3,
+      "data": {
+        "hasInput": true,
+        "hasButtons": true,
+        "hasNavigation": true,
+        "hasContent": true
+      }
+    },
+    {
+      "name": "Performance Check",
+      "success": true,
+      "duration": 1,
+      "data": {
+        "domContentLoaded": 239,
+        "loadComplete": -732,
+        "transferSize": 7909,
+        "responseStart": 48
+      }
+    },
+    {
+      "name": "Chat Interface",
+      "success": true,
+      "duration": 41,
+      "data": {
+        "chatInputFunctional": true
+      }
+    },
+    {
+      "name": "Mobile Responsiveness",
+      "success": true,
+      "duration": 1016,
+      "data": {
+        "noHorizontalScroll": true,
+        "hasViewportMeta": true,
+        "mobileWidth": 375
+      }
+    }
+  ],
+  "success": true,
+  "errors": [],
+  "duration": 2731,
+  "timestamp": "2025-09-11T01:07:02.940Z",
+  "ciInfo": {}
+}

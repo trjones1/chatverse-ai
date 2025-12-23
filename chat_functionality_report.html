@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatWithLexi - Chat Functionality QA Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .header { border-bottom: 2px solid #333; padding-bottom: 20px; margin-bottom: 30px; }
+        .section { margin-bottom: 40px; }
+        .finding { margin: 15px 0; padding: 15px; border-left: 4px solid #ccc; }
+        .finding.CRITICAL { border-left-color: #ff0000; background-color: #fff5f5; }
+        .finding.HIGH { border-left-color: #ff6600; background-color: #fffaf0; }
+        .finding.MEDIUM { border-left-color: #ffcc00; background-color: #fffef0; }
+        .finding.POSITIVE { border-left-color: #00cc00; background-color: #f0fff0; }
+        .screenshot { margin: 10px 0; }
+        .summary { background-color: #e6f3ff; padding: 20px; border-radius: 5px; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ChatWithLexi - Chat Functionality QA Report</h1>
+        <p><strong>Site:</strong> https://www.chatwithlexi.com</p>
+        <p><strong>Assessment Date:</strong> 9/6/2025, 12:24:49 AM</p>
+        <p><strong>Focus:</strong> Chat System Testing and Functionality Validation</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Chat Functionality Summary</h2>
+        <p><strong>Positive Findings:</strong> 4 (working features)</p>
+        <p><strong>Critical Issues:</strong> 1</p>
+        <p><strong>High Priority Issues:</strong> 2</p>
+        <p><strong>Medium Priority Issues:</strong> 1</p>
+        <p><strong>Total Screenshots:</strong> 5</p>
+    </div>
+
+    <div class="section">
+        <h2>Chat Functionality Findings</h2>
+        
+            <div class="finding CRITICAL">
+                <h3>[CRITICAL] Chat page access failed</h3>
+                <p>Cannot access chat page: page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://www.chatwithlexi.com/chat", waiting until "networkidle"[22m
+</p>
+                <small>Detected at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Chat container present</h3>
+                <p>Main chat container element located</p>
+                <small>Detected at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Message input present</h3>
+                <p>Text input for messages located</p>
+                <small>Detected at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Send button present</h3>
+                <p>Send button located</p>
+                <small>Detected at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="finding HIGH">
+                <h3>[HIGH] Message history missing</h3>
+                <p>No message history display area found</p>
+                <small>Detected at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="finding HIGH">
+                <h3>[HIGH] Message sending test failed</h3>
+                <p>Error during message sending test: locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('button').filter({ hasText: /send|submit|>|➤|arrow/i }).first()[22m
+[2m    - locator resolved to <button>Send</button>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="fixed inset-x-0 bottom-0 z-[999]">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is visible, enabled and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <div class="fixed inset-x-0 bottom-0 z-[999]">…</div> intercepts pointer events[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is visible, enabled and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <div class="fixed inset-x-0 bottom-0 z-[999]">…</div> intercepts pointer events[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+</p>
+                <small>Detected at: 9/6/2025, 12:25:53 AM</small>
+            </div>
+        
+            <div class="finding MEDIUM">
+                <h3>[MEDIUM] Character element missing</h3>
+                <p>No character/avatar element found</p>
+                <small>Detected at: 9/6/2025, 12:25:53 AM</small>
+            </div>
+        
+            <div class="finding POSITIVE">
+                <h3>[POSITIVE] Mobile chat interface functional</h3>
+                <p>Chat input and send button work on mobile</p>
+                <small>Detected at: 9/6/2025, 12:25:54 AM</small>
+            </div>
+        
+    </div>
+
+    <div class="section">
+        <h2>Test Screenshots</h2>
+        
+            <div class="screenshot">
+                <h4>homepage_before_chat</h4>
+                <p>Homepage before accessing chat</p>
+                <p><strong>File:</strong> chat_1757136293286_homepage_before_chat.png</p>
+                <small>Taken at: 9/6/2025, 12:24:53 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>message_input_filled</h4>
+                <p>Message input with test content</p>
+                <p><strong>File:</strong> chat_1757136323436_message_input_filled.png</p>
+                <small>Taken at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>before_send_message</h4>
+                <p>Before sending test message</p>
+                <p><strong>File:</strong> chat_1757136323548_before_send_message.png</p>
+                <small>Taken at: 9/6/2025, 12:25:23 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>chat_mobile</h4>
+                <p>Chat interface on mobile viewport</p>
+                <p><strong>File:</strong> chat_1757136354676_chat_mobile.png</p>
+                <small>Taken at: 9/6/2025, 12:25:54 AM</small>
+            </div>
+        
+            <div class="screenshot">
+                <h4>chat_tablet</h4>
+                <p>Chat interface on tablet viewport</p>
+                <p><strong>File:</strong> chat_1757136355744_chat_tablet.png</p>
+                <small>Taken at: 9/6/2025, 12:25:55 AM</small>
+            </div>
+        
+    </div>
+</body>
+</html>
+    
