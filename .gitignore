@@ -58,17 +58,10 @@ test-evidence/
 *findings-summary*.md
 *-report*.json
 *-report*.html
-*-report*.pdf
 signup-test-results-*.json
 google-auth-*.json
 qa-report-*.html
 qa-report-*.md
-qa-reports/
-test-grid-*.png
-
-# TypeScript build info
-tsconfig.tsbuildinfo
-*.tsbuildinfo
 
 # Scripts with secrets
 scripts/stripe-*.sh

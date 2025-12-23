@@ -313,12 +313,10 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({
 
     // Check if user has voice credits (no unlimited voice - everyone pays per use)
     if (voiceCredits <= 0) {
-      // Users without credits need to purchase voice credits
-      if (!paid) {
-        setPop?.(buildPop('VOICE_PREMIUM_REQUIRED')!);
-      } else {
-        setPop?.(buildPop('VOICE_OUT')!);
-      }
+      // Open VerseCoins purchase modal immediately (conversion optimization)
+      window.dispatchEvent(new CustomEvent('open-versecoins-modal', {
+        detail: { defaultTab: 'purchase', reason: 'voice' }
+      }));
       return;
     }
     
@@ -370,7 +368,10 @@ const MessageBubble: React.FC<MessageBubbleProps> = ({
 
       if (res.status === 402) {
         setTokensLeft(0);
-        toast.error('Voice locked — buy a credit pack to keep listening.');
+        // Open VerseCoins purchase modal immediately (conversion optimization)
+        window.dispatchEvent(new CustomEvent('open-versecoins-modal', {
+          detail: { defaultTab: 'purchase', reason: 'voice' }
+        }));
         setLoading(false);
         return;
       }

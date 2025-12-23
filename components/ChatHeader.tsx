@@ -191,6 +191,28 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
     }
   }, [showMenuDropdown]);
 
+  // Listen for "open VerseCoins modal" events (triggered from anywhere in the app)
+  useEffect(() => {
+    const handler = (evt: any) => {
+      const detail = evt?.detail || {};
+      const tab = detail.defaultTab || 'purchase';
+
+      // If not logged in, force login first
+      if (!authState.user?.id) {
+        window.dispatchEvent(new Event('open-login'));
+        document.body.dataset.modal = 'open';
+        return;
+      }
+
+      // Open the VerseCoins modal with the specified tab
+      setModalDefaultTab(tab);
+      setShowCryptoModal(true);
+    };
+
+    window.addEventListener('open-versecoins-modal', handler as any);
+    return () => window.removeEventListener('open-versecoins-modal', handler as any);
+  }, [authState.user?.id]);
+
 
   return (
     <div className="chat-header-container fixed top-8 sm:top-14 left-0 right-0 z-30 px-2 sm:px-4 pt-3 transition-all duration-300 ease-in-out">

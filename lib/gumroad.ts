@@ -238,3 +238,85 @@ export function getMissingGumroadProductIds(): string[] {
     .filter(p => !p.gumroad_product_id)
     .map(p => p.id);
 }
+
+/**
+ * Claim pending Gumroad purchases for a user who just signed up
+ * Returns the number of purchases claimed
+ */
+export async function claimPendingPurchases(userId: string, email: string): Promise<number> {
+  const { getSupabaseAdmin } = await import('@/lib/supabaseAdmin');
+  const admin = getSupabaseAdmin();
+
+  // Find all pending purchases for this email
+  const { data: pending, error: fetchError } = await admin
+    .from('pending_gumroad_purchases')
+    .select('*')
+    .eq('email', email.toLowerCase().trim())
+    .eq('status', 'pending');
+
+  if (fetchError || !pending || pending.length === 0) {
+    return 0;
+  }
+
+  let claimedCount = 0;
+
+  for (const purchase of pending) {
+    try {
+      // Get current balance
+      const { data: userCoins } = await admin
+        .from('user_versecoins')
+        .select('credits,total_earned')
+        .eq('user_id', userId)
+        .single();
+
+      const currentCredits = userCoins?.credits ?? 0;
+      const newBalance = currentCredits + purchase.credits;
+
+      // Upsert balance
+      await admin
+        .from('user_versecoins')
+        .upsert({
+          user_id: userId,
+          credits: newBalance,
+          total_earned: (userCoins?.total_earned ?? 0) + purchase.credits,
+          updated_at: new Date().toISOString(),
+        });
+
+      // Record transaction
+      await admin
+        .from('versecoins_transactions')
+        .insert({
+          user_id: userId,
+          type: 'credit',
+          amount: purchase.credits,
+          balance_after: newBalance,
+          description: `Gumroad purchase claimed (bought before signup)`,
+          reference_type: 'gumroad_sale',
+          reference_id: purchase.gumroad_sale_id,
+          metadata: {
+            gumroad_product_id: purchase.gumroad_product_id,
+            purchase_email: email,
+            auto_claimed: true,
+          },
+          created_at: new Date().toISOString(),
+        });
+
+      // Mark purchase as claimed
+      await admin
+        .from('pending_gumroad_purchases')
+        .update({
+          status: 'claimed',
+          user_id: userId,
+          claimed_at: new Date().toISOString(),
+        })
+        .eq('id', purchase.id);
+
+      claimedCount++;
+    } catch (error) {
+      console.error(`Failed to claim purchase ${purchase.gumroad_sale_id}:`, error);
+      // Continue with other purchases
+    }
+  }
+
+  return claimedCount;
+}

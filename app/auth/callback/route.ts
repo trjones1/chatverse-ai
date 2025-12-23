@@ -110,6 +110,18 @@ export async function GET(req: NextRequest) {
               // Don't fail auth for notification errors
             });
           }
+
+          // 💰 AUTO-CLAIM: Check for pending Gumroad purchases with matching email
+          try {
+            const { claimPendingPurchases } = await import('@/lib/gumroad');
+            const claimedCount = await claimPendingPurchases(userId, userEmail);
+            if (claimedCount > 0) {
+              console.log(`[Auth] ✅ Auto-claimed ${claimedCount} pending Gumroad purchase(s) for ${userEmail}`);
+            }
+          } catch (claimError) {
+            console.error('[Auth] Failed to claim pending purchases:', claimError);
+            // Don't fail auth for this
+          }
         }
       } catch (trackingError) {
         console.error('Failed to track login or create email preferences:', trackingError);
